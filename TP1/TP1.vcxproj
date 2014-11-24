@@ -67,6 +67,7 @@
   <ItemGroup>
     <ClInclude Include="..\src\raytracer\Base.h" />
     <ClInclude Include="..\src\raytracer\Camera.h" />
+    <ClInclude Include="..\src\raytracer\Case.h" />
     <ClInclude Include="..\src\raytracer\Chronometre.h" />
     <ClInclude Include="..\src\raytracer\Couleur.h" />
     <ClInclude Include="..\src\raytracer\Eclairement.h" />
@@ -87,6 +88,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\raytracer\Camera.cpp" />
+    <ClCompile Include="..\src\raytracer\Case.cpp" />
     <ClCompile Include="..\src\raytracer\Chronometre.cpp" />
     <ClCompile Include="..\src\raytracer\Couleur.cpp" />
     <ClCompile Include="..\src\raytracer\Image.cpp" />

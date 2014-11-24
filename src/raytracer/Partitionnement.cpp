@@ -54,3 +54,31 @@ bool PartitionnementUnitaire::intersection(const Rayon &rayon, Intersection &int
 }
 
 
+/// [PartitionnementGrille]
+void PartitionnementGrille::initialiser( AutoSet<Primitive>::const_iterator itDebut,
+	AutoSet<Primitive>::const_iterator itFin)
+{
+	_itDebut = itDebut;
+	_itFin = itFin;
+
+	//[TODO] initialiser le tableau de case a 3 dimensions
+	_caseData;
+}
+bool PartitionnementGrille::visibilite(const Rayon &rayon, reel distanceMax) const
+{
+	//[TODO] - parcourir les cases
+	//       - pour chacune d'elle verifier les primitives intégrées dans la case
+	return true;
+}
+
+bool PartitionnementGrille::intersection(const Rayon &rayon, Intersection &intersection) const
+{
+	bool trouve = false;
+
+	//[TODO] - parcourir les cases
+	//       - pour chacune d'elle verifier les primitives intégrées dans la case
+	return trouve;
+}
+
+/// [PartitionnementGrille]
+

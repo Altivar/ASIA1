@@ -127,6 +127,29 @@ struct PrimitiveSphere : Primitive
 	bool calculerIntersection(const Rayon &, reel &distance) const;
 };
 
+/// \brief Definit une primitive geometrique de type boite
+///
+struct PrimitiveBoite : Primitive
+{
+	// angle d'origine de la boite
+	Vecteur3 _origine;
+
+	// dimensions de la boite
+	Vecteur3 _dimensions;
+
+	/// [Methods]
+	
+	// constructeur
+	PrimitiveBoite(Materiau* materiau, const Vecteur3& origine, const Vecteur3& dimensions);
+	
+	// calculs d'intersection
+	bool calculerIntersection(const Rayon& rayon, Intersection& intersection) const;
+	bool calculerIntersection(const Rayon& rayon, reel& distance) const;
+
+	/// [Methods]
+
+};
+
 #endif /* PRIMITIVE_H_ */
 
 

@@ -72,6 +72,9 @@
     <ClInclude Include="..\src\raytracer\Vecteur3.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\raytracer\Case.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\raytracer\Camera.cpp">
@@ -123,6 +126,9 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="..\src\raytracer\Vecteur3.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\raytracer\Case.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>

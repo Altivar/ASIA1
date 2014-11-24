@@ -153,4 +153,25 @@ bool PrimitiveTriangle::calculerIntersection(const Rayon &rayon, reel &distance)
 	return true;
 }
 
+/// [PrimitiveBoite]
+PrimitiveBoite::PrimitiveBoite(Materiau* materiau, const Vecteur3& origine, const Vecteur3& dimensions)
+	: Primitive(materiau)
+	, _origine(origine)
+	, _dimensions(dimensions)
+{
+}
 
+bool PrimitiveBoite::calculerIntersection(const Rayon& rayon, Intersection& intersection) const
+{
+	// [TODO] - editer l'intersection
+	//        - return true en cas d'intersection, sinon false
+	return true;
+}
+
+bool PrimitiveBoite::calculerIntersection(const Rayon& rayon, reel& distance) const
+{
+	// [TODO] - editer la distance
+	//        - return true en cas d'intersection, sinon false
+	return true;
+}
+/// [PrimitiveBoite]

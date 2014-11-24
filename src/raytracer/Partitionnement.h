@@ -7,6 +7,7 @@
 #include "Intersection.h"
 #include "Primitive.h"
 #include "Rayon.h"
+#include "Case.h"
 
 /// \brief Partitionnement des primitives.
 ///
@@ -63,5 +64,29 @@ public:
 	bool intersection(const Rayon &rayon, Intersection &intersection) const;
 };
 
+
+/// [PartitionnementGrille]
+class PartitionnementGrille : public Partitionnement
+{
+
+	AutoSet<Primitive>::const_iterator _itDebut;
+	AutoSet<Primitive>::const_iterator _itFin;
+
+	// [TODO] declarer un tableau de case sur 3 dimensions
+	Case*** _caseData;
+
+public:
+	
+	// initialise les iterateurs
+	void initialiser(AutoSet<Primitive>::const_iterator itDebut, AutoSet<Primitive>::const_iterator itFin);
+
+	// retourne vrai si le rayon n'est pas interrompu sur une certaine distance
+	bool visibilite(const Rayon& rayon, reel distance) const;
+
+	// détermine l'intersection la plus proche (l'initialisation doit avoir été effectuée)
+	bool intersection(const Rayon& rayon, Intersection& intersection) const;
+
+};
+/// [PartitionnementGrille]
 
 #endif /* PARTITIONNEMENT_H_ */
