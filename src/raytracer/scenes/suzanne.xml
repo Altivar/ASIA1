@@ -1,0 +1,466 @@
+<?xml version="1.0"?>
+<scene>
+<camera nom="Camera">
+<camera_pinhole position_x="7.48113155365" position_y="-6.50763988495" position_z="5.34366512299" visee_x="-0.654861867428" visee_y="0.610665619373" visee_z="-0.445245355368" verticale_x="-0.317370116711" verticale_y="0.312468618155" verticale_z="0.895343244076" xfov="49.1343421936"/>
+</camera>
+<lumiere nom="Lamp">
+<lumiere_point position_x="4.07624530792" position_y="1.00545394421" position_z="5.90386199951" couleur_r="1.0" couleur_g="1.0" couleur_b="1.0"/>
+</lumiere>
+<objet nom="Suzanne">
+<materiau_phong ns="5.0">
+<materiau_ca r="0.0" g="0.0" b="0.0"/>
+<materiau_cd r="0.800000011921" g="0.800000011921" b="0.800000011921"/>
+<materiau_cs r="1.0" g="1.0" b="1.0"/>
+</materiau_phong>
+<primitive_triangle>
+<sommet position_x="0.811340212822" position_y="-0.296999543905" position_z="-0.274373680353" normale_x="0.839700341225" normale_y="-0.538443744183" normale_z="0.0705814212561" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.83645927906" position_y="-0.0868016779423" position_z="-0.289925187826" normale_x="0.97084403038" normale_y="0.235161408782" normale_z="0.0464866869152" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.763441741467" position_y="0.0261363536119" position_z="0.34511834383" normale_x="0.960591197014" normale_y="-0.228242307901" normale_z="0.158650562167" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.839351415634" position_y="0.198151320219" position_z="0.344121485949" normale_x="0.983127593994" normale_y="0.156847909093" normale_z="-0.0941217467189" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.69182497263" position_y="0.322796821594" position_z="0.108455404639" normale_x="0.865634024143" normale_y="0.352772116661" normale_z="-0.355288088322" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.5905777812" position_y="0.425388664007" position_z="0.695156276226" normale_x="0.678559601307" normale_y="0.692637860775" normale_z="0.24456012249" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.0531358905137" position_y="-0.759768247604" position_z="0.886420965195" normale_x="-0.192382544279" normale_y="-0.921508312225" normale_z="0.337359428406" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.335251748562" position_y="-0.877166152" position_z="0.87509816885" normale_x="0.498571962118" normale_y="-0.850437045097" normale_z="0.167877331376" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.530595004559" position_y="-0.388427108526" position_z="1.54449820518" normale_x="0.857925057411" normale_y="-0.342253029346" normale_z="0.383180677891" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.438146561384" position_y="-0.625177741051" position_z="0.108455404639" normale_x="0.573755383492" normale_y="-0.737953364849" normale_z="-0.355288088322" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.628208637238" position_y="-0.590871036053" position_z="0.344121485949" normale_x="0.773397684097" normale_y="-0.626894831657" normale_z="-0.0941217467189" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.299192905426" position_y="-0.663491666317" position_z="0.695156276226" normale_x="0.241942077875" normale_y="-0.938964545727" normale_z="0.24456012249" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="-0.323143422604" position_y="-0.624105513096" position_z="-0.194673120975" normale_x="-0.239447593689" normale_y="-0.87465262413" normale_z="-0.42148271203" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.682467222214" position_y="-0.337457865477" position_z="-0.00879485439509" normale_x="-0.866515755653" normale_y="-0.381317973137" normale_z="-0.32209789753" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.543153107166" position_y="0.228397414088" position_z="-0.638035953045" normale_x="-0.672738611698" normale_y="0.345344483852" normale_z="-0.654339313507" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="-1.02350914478" position_y="0.0242647565901" position_z="1.25692605972" normale_x="-0.987128198147" normale_y="0.127078711987" normale_z="0.0971021726727" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.191116034985" position_y="0.779207587242" position_z="1.57195174694" normale_x="0.107350409031" normale_y="0.838854432106" normale_z="0.533665835857" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.345949709415" position_y="0.877680897713" position_z="0.399512410164" normale_x="-0.800942957401" normale_y="0.593095362186" normale_z="-0.0820258483291" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.530595004559" position_y="-0.388427108526" position_z="1.54449820518" normale_x="0.857925057411" normale_y="-0.342253029346" normale_z="0.383180677891" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.543782770634" position_y="-0.498694628477" position_z="0.928858578205" normale_x="0.886431276798" normale_y="-0.449341207743" normale_z="0.111050114036" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.614850878716" position_y="-0.365096509457" position_z="0.715351641178" normale_x="0.971312582493" normale_y="-0.190021798015" normale_z="0.142981186509" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="-0.323143422604" position_y="-0.624105513096" position_z="-0.194673120975" normale_x="-0.239447593689" normale_y="-0.87465262413" normale_z="-0.42148271203" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.534473657608" position_y="-0.757127344608" position_z="0.583706200123" normale_x="0.217842176557" normale_y="-0.973244607449" normale_z="0.0730734467506" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.520103514194" position_y="-0.707605481148" position_z="0.0397452712059" normale_x="0.656831383705" normale_y="-0.749098598957" normale_z="0.0861620828509" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.715018868446" position_y="0.00922277662903" position_z="0.715351641178" normale_x="0.922457814217" normale_y="-0.374603271484" normale_z="0.093508683145" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.605421423912" position_y="-0.162011042237" position_z="0.859317481518" normale_x="0.857429921627" normale_y="-0.218102380633" normale_z="0.466095745564" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.763441741467" position_y="0.0261363536119" position_z="0.34511834383" normale_x="0.960591197014" normale_y="-0.228242307901" normale_z="0.158650562167" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.605421423912" position_y="-0.162011042237" position_z="0.859317481518" normale_x="0.857429921627" normale_y="-0.218102380633" normale_z="0.466095745564" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.191116034985" position_y="0.779207587242" position_z="1.57195174694" normale_x="0.107350409031" normale_y="0.838854432106" normale_z="0.533665835857" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.184414803982" position_y="-0.344222337008" position_z="1.91316688061" normale_x="0.138174414635" normale_y="-0.599569797516" normale_z="0.788304448128" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="-0.138617292047" position_y="1.2656109333" position_z="-0.0198889002204" normale_x="0.304402202368" normale_y="0.92906165123" normale_z="-0.210199400783" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.0971882268786" position_y="0.872793018818" position_z="0.0397452712059" normale_x="0.93978536129" normale_y="0.329402089119" normale_z="0.0910919308662" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.0329385511577" position_y="0.710491359234" position_z="-0.181187406182" normale_x="0.310849517584" normale_y="0.849523067474" normale_z="-0.426243007183" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.83645927906" position_y="-0.0868016779423" position_z="-0.289925187826" normale_x="0.97084403038" normale_y="0.235161408782" normale_z="0.0464866869152" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.896765828133" position_y="-0.236786052585" position_z="-1.60805463791" normale_x="0.974769771099" normale_y="-0.201916962862" normale_z="-0.0951493531466" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.810026407242" position_y="0.1664647609" position_z="-1.83995616436" normale_x="0.149554133415" normale_y="0.919064700603" normale_z="-0.364628016949" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.0531358905137" position_y="-0.759768247604" position_z="0.886420965195" normale_x="-0.192382544279" normale_y="-0.921508312225" normale_z="0.337359428406" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.184414803982" position_y="-0.344222337008" position_z="1.91316688061" normale_x="0.138174414635" normale_y="-0.599569797516" normale_z="0.788304448128" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.712835252285" position_y="-0.697653412819" position_z="0.856416106224" normale_x="-0.787521481514" normale_y="-0.604499042034" normale_z="0.119961932302" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.573612689972" position_y="0.112331144512" position_z="-0.553464174271" normale_x="0.373442173004" normale_y="0.832401990891" normale_z="-0.409448206425" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.664093613625" position_y="0.608601868153" position_z="0.173059955239" normale_x="0.67203694582" normale_y="0.725663602352" normale_z="-0.147576123476" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.802489280701" position_y="0.211251974106" position_z="0.293182820082" normale_x="0.96072947979" normale_y="0.256275951862" normale_z="-0.106402695179" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.271380096674" position_y="-0.858935058117" position_z="0.173059955239" normale_x="0.232374727726" normale_y="-0.958738148212" normale_z="-0.163777843118" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.589730203152" position_y="-0.583810508251" position_z="0.293182820082" normale_x="0.692175447941" normale_y="-0.710141658783" normale_z="-0.128810077906" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.479748487473" position_y="-0.697165429592" position_z="0.625265479088" normale_x="0.757737398148" normale_y="-0.652498364449" normale_z="0.00894172489643" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.573612689972" position_y="0.112331144512" position_z="-0.553464174271" normale_x="0.373442173004" normale_y="0.832401990891" normale_z="-0.409448206425" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.802489280701" position_y="0.211251974106" position_z="0.293182820082" normale_x="0.96072947979" normale_y="0.256275951862" normale_z="-0.106402695179" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.83645927906" position_y="-0.0868016779423" position_z="-0.289925187826" normale_x="0.97084403038" normale_y="0.235161408782" normale_z="0.0464866869152" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="-0.534473657608" position_y="-0.757127344608" position_z="0.583706200123" normale_x="0.217842176557" normale_y="-0.973244607449" normale_z="0.0730734467506" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.271380096674" position_y="-0.858935058117" position_z="0.173059955239" normale_x="0.232374727726" normale_y="-0.958738148212" normale_z="-0.163777843118" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.0531358905137" position_y="-0.759768247604" position_z="0.886420965195" normale_x="-0.192382544279" normale_y="-0.921508312225" normale_z="0.337359428406" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.839351415634" position_y="0.198151320219" position_z="0.344121485949" normale_x="0.983127593994" normale_y="0.156847909093" normale_z="-0.0941217467189" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.625532746315" position_y="-0.0778372958302" position_z="0.377101272345" normale_x="0.59150749445" normale_y="-0.805331885815" normale_z="-0.0394900888205" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.69182497263" position_y="0.322796821594" position_z="0.108455404639" normale_x="0.865634024143" normale_y="0.352772116661" normale_z="-0.355288088322" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.605421423912" position_y="-0.162011042237" position_z="0.859317481518" normale_x="0.857429921627" normale_y="-0.218102380633" normale_z="0.466095745564" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.425490111113" position_y="0.631687700748" position_z="0.886420965195" normale_x="0.203470349312" normale_y="0.904528915882" normale_z="0.374736309052" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.191116034985" position_y="0.779207587242" position_z="1.57195174694" normale_x="0.107350409031" normale_y="0.838854432106" normale_z="0.533665835857" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.58080548048" position_y="-0.244979336858" position_z="0.377101272345" normale_x="0.91466486454" normale_y="0.402279525995" normale_z="-0.0394900888205" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.628208637238" position_y="-0.590871036053" position_z="0.344121485949" normale_x="0.773397684097" normale_y="-0.626894831657" normale_z="-0.0941217467189" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.438146561384" position_y="-0.625177741051" position_z="0.108455404639" normale_x="0.573755383492" normale_y="-0.737953364849" normale_z="-0.355288088322" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.589730203152" position_y="-0.583810508251" position_z="0.293182820082" normale_x="0.692175447941" normale_y="-0.710141658783" normale_z="-0.128810077906" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.271380096674" position_y="-0.858935058117" position_z="0.173059955239" normale_x="0.232374727726" normale_y="-0.958738148212" normale_z="-0.163777843118" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.477313756943" position_y="-0.371916353703" position_z="-0.359774500132" normale_x="0.0793223381042" normale_y="-0.956869721413" normale_z="-0.27947857976" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.763441741467" position_y="0.0261363536119" position_z="0.34511834383" normale_x="0.960591197014" normale_y="-0.228242307901" normale_z="0.158650562167" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.605421423912" position_y="-0.162011042237" position_z="0.859317481518" normale_x="0.857429921627" normale_y="-0.218102380633" normale_z="0.466095745564" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.614850878716" position_y="-0.365096509457" position_z="0.715351641178" normale_x="0.971312582493" normale_y="-0.190021798015" normale_z="0.142981186509" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="-0.712835252285" position_y="-0.697653412819" position_z="0.856416106224" normale_x="-0.787521481514" normale_y="-0.604499042034" normale_z="0.119961932302" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.534473657608" position_y="-0.757127344608" position_z="0.583706200123" normale_x="0.217842176557" normale_y="-0.973244607449" normale_z="0.0730734467506" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.0531358905137" position_y="-0.759768247604" position_z="0.886420965195" normale_x="-0.192382544279" normale_y="-0.921508312225" normale_z="0.337359428406" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.763441741467" position_y="0.0261363536119" position_z="0.34511834383" normale_x="0.960591197014" normale_y="-0.228242307901" normale_z="0.158650562167" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.65328592062" position_y="-0.414673298597" position_z="0.35764554143" normale_x="0.94323861599" normale_y="-0.290145128965" normale_z="0.161606684327" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.811340212822" position_y="-0.296999543905" position_z="-0.274373680353" normale_x="0.839700341225" normale_y="-0.538443744183" normale_z="0.0705814212561" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="-0.0849047452211" position_y="0.922873258591" position_z="0.583706200123" normale_x="0.443149477243" normale_y="0.890007078648" normale_z="0.107265941799" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.206434607506" position_y="1.3525595665" position_z="0.628359138966" normale_x="0.703779041767" normale_y="0.604931533337" normale_z="0.372495502234" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.345949709415" position_y="0.877680897713" position_z="0.399512410164" normale_x="-0.800942957401" normale_y="0.593095362186" normale_z="-0.0820258483291" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.413728505373" position_y="-0.177551105618" position_z="-0.943799197674" normale_x="-0.837089776993" normale_y="-0.0618417412043" normale_z="-0.543558955193" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.323143422604" position_y="-0.624105513096" position_z="-0.194673120975" normale_x="-0.239447593689" normale_y="-0.87465262413" normale_z="-0.42148271203" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.543153107166" position_y="0.228397414088" position_z="-0.638035953045" normale_x="-0.672738611698" normale_y="0.345344483852" normale_z="-0.654339313507" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="-0.682467222214" position_y="-0.337457865477" position_z="-0.00879485439509" normale_x="-0.866515755653" normale_y="-0.381317973137" normale_z="-0.32209789753" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.712835252285" position_y="-0.697653412819" position_z="0.856416106224" normale_x="-0.787521481514" normale_y="-0.604499042034" normale_z="0.119961932302" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-1.02350914478" position_y="0.0242647565901" position_z="1.25692605972" normale_x="-0.987128198147" normale_y="0.127078711987" normale_z="0.0971021726727" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.589730203152" position_y="-0.583810508251" position_z="0.293182820082" normale_x="0.692175447941" normale_y="-0.710141658783" normale_z="-0.128810077906" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.477313756943" position_y="-0.371916353703" position_z="-0.359774500132" normale_x="0.0793223381042" normale_y="-0.956869721413" normale_z="-0.27947857976" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.811340212822" position_y="-0.296999543905" position_z="-0.274373680353" normale_x="0.839700341225" normale_y="-0.538443744183" normale_z="0.0705814212561" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.839351415634" position_y="0.198151320219" position_z="0.344121485949" normale_x="0.983127593994" normale_y="0.156847909093" normale_z="-0.0941217467189" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.782544136047" position_y="0.128190010786" position_z="0.844679176807" normale_x="0.884422838688" normale_y="-0.191332802176" normale_z="0.425661861897" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.625532746315" position_y="-0.0778372958302" position_z="0.377101272345" normale_x="0.59150749445" normale_y="-0.805331885815" normale_z="-0.0394900888205" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.530595004559" position_y="-0.388427108526" position_z="1.54449820518" normale_x="0.857925057411" normale_y="-0.342253029346" normale_z="0.383180677891" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.335251748562" position_y="-0.877166152" position_z="0.87509816885" normale_x="0.498571962118" normale_y="-0.850437045097" normale_z="0.167877331376" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.543782770634" position_y="-0.498694628477" position_z="0.928858578205" normale_x="0.886431276798" normale_y="-0.449341207743" normale_z="0.111050114036" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.58080548048" position_y="-0.244979336858" position_z="0.377101272345" normale_x="0.91466486454" normale_y="0.402279525995" normale_z="-0.0394900888205" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.613934874535" position_y="-0.50188845396" position_z="0.844679176807" normale_x="0.861778795719" normale_y="-0.275951504707" normale_z="0.425661832094" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.628208637238" position_y="-0.590871036053" position_z="0.344121485949" normale_x="0.773397684097" normale_y="-0.626894831657" normale_z="-0.0941217467189" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="-0.323143422604" position_y="-0.624105513096" position_z="-0.194673120975" normale_x="-0.239447593689" normale_y="-0.87465262413" normale_z="-0.42148271203" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.271380096674" position_y="-0.858935058117" position_z="0.173059955239" normale_x="0.232374727726" normale_y="-0.958738148212" normale_z="-0.163777843118" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.534473657608" position_y="-0.757127344608" position_z="0.583706200123" normale_x="0.217842176557" normale_y="-0.973244607449" normale_z="0.0730734467506" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="-0.323143422604" position_y="-0.624105513096" position_z="-0.194673120975" normale_x="-0.239447593689" normale_y="-0.87465262413" normale_z="-0.42148271203" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.752183139324" position_y="-1.02723228931" position_z="-0.0198889002204" normale_x="-0.791790723801" normale_y="-0.291151434183" normale_z="0.53693407774" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.712835252285" position_y="-0.697653412819" position_z="0.856416106224" normale_x="-0.787521481514" normale_y="-0.604499042034" normale_z="0.119961932302" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="-0.0849047452211" position_y="0.922873258591" position_z="0.583706200123" normale_x="0.443149477243" normale_y="0.890007078648" normale_z="0.107265941799" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.191116034985" position_y="0.779207587242" position_z="1.57195174694" normale_x="0.107350409031" normale_y="0.838854432106" normale_z="0.533665835857" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.425490111113" position_y="0.631687700748" position_z="0.886420965195" normale_x="0.203470349312" normale_y="0.904528915882" normale_z="0.374736309052" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.477313756943" position_y="-0.371916353703" position_z="-0.359774500132" normale_x="0.0793223381042" normale_y="-0.956869721413" normale_z="-0.27947857976" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.271380096674" position_y="-0.858935058117" position_z="0.173059955239" normale_x="0.232374727726" normale_y="-0.958738148212" normale_z="-0.163777843118" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.323143422604" position_y="-0.624105513096" position_z="-0.194673120975" normale_x="-0.239447593689" normale_y="-0.87465262413" normale_z="-0.42148271203" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="-0.854362010956" position_y="-1.06868994236" position_z="0.628359138966" normale_x="0.614297628403" normale_y="-0.761940479279" normale_z="0.20514652133" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.520103514194" position_y="-0.707605481148" position_z="0.0397452712059" normale_x="0.656831383705" normale_y="-0.749098598957" normale_z="0.0861620828509" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.534473657608" position_y="-0.757127344608" position_z="0.583706200123" normale_x="0.217842176557" normale_y="-0.973244607449" normale_z="0.0730734467506" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.625532746315" position_y="-0.0778372958302" position_z="0.377101272345" normale_x="0.59150749445" normale_y="-0.805331885815" normale_z="-0.0394900888205" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.782544136047" position_y="0.128190010786" position_z="0.844679176807" normale_x="0.884422838688" normale_y="-0.191332802176" normale_z="0.425661861897" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.544275939465" position_y="0.134456366301" position_z="0.980003356934" normale_x="0.437883317471" normale_y="-0.427647083998" normale_z="0.790807306767" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="-0.323143422604" position_y="-0.624105513096" position_z="-0.194673120975" normale_x="-0.239447593689" normale_y="-0.87465262413" normale_z="-0.42148271203" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.712835252285" position_y="-0.697653412819" position_z="0.856416106224" normale_x="-0.787521481514" normale_y="-0.604499042034" normale_z="0.119961932302" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.682467222214" position_y="-0.337457865477" position_z="-0.00879485439509" normale_x="-0.866515755653" normale_y="-0.381317973137" normale_z="-0.32209789753" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.404381453991" position_y="-0.388317525387" position_z="0.980003356934" normale_x="0.59294295311" normale_y="0.151797518134" normale_z="0.790807306767" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.613934874535" position_y="-0.50188845396" position_z="0.844679176807" normale_x="0.861778795719" normale_y="-0.275951504707" normale_z="0.425661832094" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.58080548048" position_y="-0.244979336858" position_z="0.377101272345" normale_x="0.91466486454" normale_y="0.402279525995" normale_z="-0.0394900888205" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.425490111113" position_y="0.631687700748" position_z="0.886420965195" normale_x="0.203470349312" normale_y="0.904528915882" normale_z="0.374736309052" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.664093613625" position_y="0.608601868153" position_z="0.173059955239" normale_x="0.67203694582" normale_y="0.725663602352" normale_z="-0.147576123476" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.0849047452211" position_y="0.922873258591" position_z="0.583706200123" normale_x="0.443149477243" normale_y="0.890007078648" normale_z="0.107265941799" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.664093613625" position_y="0.608601868153" position_z="0.173059955239" normale_x="0.67203694582" normale_y="0.725663602352" normale_z="-0.147576123476" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.573612689972" position_y="0.112331144512" position_z="-0.553464174271" normale_x="0.373442173004" normale_y="0.832401990891" normale_z="-0.409448206425" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.0329385511577" position_y="0.710491359234" position_z="-0.181187406182" normale_x="0.310849517584" normale_y="0.849523067474" normale_z="-0.426243007183" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.715018868446" position_y="0.00922277662903" position_z="0.715351641178" normale_x="0.922457814217" normale_y="-0.374603271484" normale_z="0.093508683145" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.653675913811" position_y="0.0715157091618" position_z="1.54449820518" normale_x="0.91419750452" normale_y="-0.13196772337" normale_z="0.383180677891" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.605421423912" position_y="-0.162011042237" position_z="0.859317481518" normale_x="0.857429921627" normale_y="-0.218102380633" normale_z="0.466095745564" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="-0.682467222214" position_y="-0.337457865477" position_z="-0.00879485439509" normale_x="-0.866515755653" normale_y="-0.381317973137" normale_z="-0.32209789753" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-1.02350914478" position_y="0.0242647565901" position_z="1.25692605972" normale_x="-0.987128198147" normale_y="0.127078711987" normale_z="0.0971021726727" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.543153107166" position_y="0.228397414088" position_z="-0.638035953045" normale_x="-0.672738611698" normale_y="0.345344483852" normale_z="-0.654339313507" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.413728505373" position_y="-0.177551105618" position_z="-0.943799197674" normale_x="-0.837089776993" normale_y="-0.0618417412043" normale_z="-0.543558955193" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.810026407242" position_y="0.1664647609" position_z="-1.83995616436" normale_x="0.149554133415" normale_y="0.919064700603" normale_z="-0.364628016949" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.632021546364" position_y="-0.564188182354" position_z="-1.80158889294" normale_x="-0.178669944406" normale_y="-0.942501664162" normale_z="-0.28243175149" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.335251748562" position_y="-0.877166152" position_z="0.87509816885" normale_x="0.498571962118" normale_y="-0.850437045097" normale_z="0.167877331376" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.271380096674" position_y="-0.858935058117" position_z="0.173059955239" normale_x="0.232374727726" normale_y="-0.958738148212" normale_z="-0.163777843118" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.479748487473" position_y="-0.697165429592" position_z="0.625265479088" normale_x="0.757737398148" normale_y="-0.652498364449" normale_z="0.00894172489643" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.605421423912" position_y="-0.162011042237" position_z="0.859317481518" normale_x="0.857429921627" normale_y="-0.218102380633" normale_z="0.466095745564" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.653675913811" position_y="0.0715157091618" position_z="1.54449820518" normale_x="0.91419750452" normale_y="-0.13196772337" normale_z="0.383180677891" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.425490111113" position_y="0.631687700748" position_z="0.886420965195" normale_x="0.203470349312" normale_y="0.904528915882" normale_z="0.374736309052" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.271380096674" position_y="-0.858935058117" position_z="0.173059955239" normale_x="0.232374727726" normale_y="-0.958738148212" normale_z="-0.163777843118" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.335251748562" position_y="-0.877166152" position_z="0.87509816885" normale_x="0.498571962118" normale_y="-0.850437045097" normale_z="0.167877331376" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.0531358905137" position_y="-0.759768247604" position_z="0.886420965195" normale_x="-0.192382544279" normale_y="-0.921508312225" normale_z="0.337359428406" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.72853410244" position_y="0.592496573925" position_z="0.87509816885" normale_x="0.856677234173" normale_y="0.487771779299" normale_z="0.167877316475" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.653675913811" position_y="0.0715157091618" position_z="1.54449820518" normale_x="0.91419750452" normale_y="-0.13196772337" normale_z="0.383180677891" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.720172703266" position_y="0.160459592938" position_z="0.928858578205" normale_x="0.992377519608" normale_y="-0.0534288324416" normale_z="0.111050114036" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.810026407242" position_y="0.1664647609" position_z="-1.83995616436" normale_x="0.149554133415" normale_y="0.919064700603" normale_z="-0.364628016949" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.413728505373" position_y="-0.177551105618" position_z="-0.943799197674" normale_x="-0.837089776993" normale_y="-0.0618417412043" normale_z="-0.543558955193" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.573612689972" position_y="0.112331144512" position_z="-0.553464174271" normale_x="0.373442173004" normale_y="0.832401990891" normale_z="-0.409448206425" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="-0.323143422604" position_y="-0.624105513096" position_z="-0.194673120975" normale_x="-0.239447593689" normale_y="-0.87465262413" normale_z="-0.42148271203" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.413728505373" position_y="-0.177551105618" position_z="-0.943799197674" normale_x="-0.837089776993" normale_y="-0.0618417412043" normale_z="-0.543558955193" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.477313756943" position_y="-0.371916353703" position_z="-0.359774500132" normale_x="0.0793223381042" normale_y="-0.956869721413" normale_z="-0.27947857976" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="-0.345949709415" position_y="0.877680897713" position_z="0.399512410164" normale_x="-0.800942957401" normale_y="0.593095362186" normale_z="-0.0820258483291" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.206434607506" position_y="1.3525595665" position_z="0.628359138966" normale_x="0.703779041767" normale_y="0.604931533337" normale_z="0.372495502234" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.138617292047" position_y="1.2656109333" position_z="-0.0198889002204" normale_x="0.304402202368" normale_y="0.92906165123" normale_z="-0.210199400783" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="-1.02350914478" position_y="0.0242647565901" position_z="1.25692605972" normale_x="-0.987128198147" normale_y="0.127078711987" normale_z="0.0971021726727" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.345949709415" position_y="0.877680897713" position_z="0.399512410164" normale_x="-0.800942957401" normale_y="0.593095362186" normale_z="-0.0820258483291" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.543153107166" position_y="0.228397414088" position_z="-0.638035953045" normale_x="-0.672738611698" normale_y="0.345344483852" normale_z="-0.654339313507" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="-0.520103514194" position_y="-0.707605481148" position_z="0.0397452712059" normale_x="0.656831383705" normale_y="-0.749098598957" normale_z="0.0861620828509" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.752183139324" position_y="-1.02723228931" position_z="-0.0198889002204" normale_x="-0.791790723801" normale_y="-0.291151434183" normale_z="0.53693407774" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.323143422604" position_y="-0.624105513096" position_z="-0.194673120975" normale_x="-0.239447593689" normale_y="-0.87465262413" normale_z="-0.42148271203" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.782544136047" position_y="0.128190010786" position_z="0.844679176807" normale_x="0.884422838688" normale_y="-0.191332802176" normale_z="0.425661861897" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.5905777812" position_y="0.425388664007" position_z="0.695156276226" normale_x="0.678559601307" normale_y="0.692637860775" normale_z="0.24456012249" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.544275939465" position_y="0.134456366301" position_z="0.980003356934" normale_x="0.437883317471" normale_y="-0.427647083998" normale_z="0.790807306767" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.763441741467" position_y="0.0261363536119" position_z="0.34511834383" normale_x="0.960591197014" normale_y="-0.228242307901" normale_z="0.158650562167" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.83645927906" position_y="-0.0868016779423" position_z="-0.289925187826" normale_x="0.97084403038" normale_y="0.235161408782" normale_z="0.0464866869152" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.802489280701" position_y="0.211251974106" position_z="0.293182820082" normale_x="0.96072947979" normale_y="0.256275951862" normale_z="-0.106402695179" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.299192905426" position_y="-0.663491666317" position_z="0.695156276226" normale_x="0.241942077875" normale_y="-0.938964545727" normale_z="0.24456012249" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.613934874535" position_y="-0.50188845396" position_z="0.844679176807" normale_x="0.861778795719" normale_y="-0.275951504707" normale_z="0.425661832094" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.404381453991" position_y="-0.388317525387" position_z="0.980003356934" normale_x="0.59294295311" normale_y="0.151797518134" normale_z="0.790807306767" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.72853410244" position_y="0.592496573925" position_z="0.87509816885" normale_x="0.856677234173" normale_y="0.487771779299" normale_z="0.167877316475" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.664093613625" position_y="0.608601868153" position_z="0.173059955239" normale_x="0.67203694582" normale_y="0.725663602352" normale_z="-0.147576123476" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.425490111113" position_y="0.631687700748" position_z="0.886420965195" normale_x="0.203470349312" normale_y="0.904528915882" normale_z="0.374736309052" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.664093613625" position_y="0.608601868153" position_z="0.173059955239" normale_x="0.67203694582" normale_y="0.725663602352" normale_z="-0.147576123476" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.0329385511577" position_y="0.710491359234" position_z="-0.181187406182" normale_x="0.310849517584" normale_y="0.849523067474" normale_z="-0.426243007183" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.0849047452211" position_y="0.922873258591" position_z="0.583706200123" normale_x="0.443149477243" normale_y="0.890007078648" normale_z="0.107265941799" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.896765828133" position_y="-0.236786052585" position_z="-1.60805463791" normale_x="0.974769771099" normale_y="-0.201916962862" normale_z="-0.0951493531466" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.811340212822" position_y="-0.296999543905" position_z="-0.274373680353" normale_x="0.839700341225" normale_y="-0.538443744183" normale_z="0.0705814212561" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.632021546364" position_y="-0.564188182354" position_z="-1.80158889294" normale_x="-0.178669944406" normale_y="-0.942501664162" normale_z="-0.28243175149" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="-0.854362010956" position_y="-1.06868994236" position_z="0.628359138966" normale_x="0.614297628403" normale_y="-0.761940479279" normale_z="0.20514652133" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.534473657608" position_y="-0.757127344608" position_z="0.583706200123" normale_x="0.217842176557" normale_y="-0.973244607449" normale_z="0.0730734467506" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.712835252285" position_y="-0.697653412819" position_z="0.856416106224" normale_x="-0.787521481514" normale_y="-0.604499042034" normale_z="0.119961932302" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.782544136047" position_y="0.128190010786" position_z="0.844679176807" normale_x="0.884422838688" normale_y="-0.191332802176" normale_z="0.425661861897" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.839351415634" position_y="0.198151320219" position_z="0.344121485949" normale_x="0.983127593994" normale_y="0.156847909093" normale_z="-0.0941217467189" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.5905777812" position_y="0.425388664007" position_z="0.695156276226" normale_x="0.678559601307" normale_y="0.692637860775" normale_z="0.24456012249" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="-0.345949709415" position_y="0.877680897713" position_z="0.399512410164" normale_x="-0.800942957401" normale_y="0.593095362186" normale_z="-0.0820258483291" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.138617292047" position_y="1.2656109333" position_z="-0.0198889002204" normale_x="0.304402202368" normale_y="0.92906165123" normale_z="-0.210199400783" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.0329385511577" position_y="0.710491359234" position_z="-0.181187406182" normale_x="0.310849517584" normale_y="0.849523067474" normale_z="-0.426243007183" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.299192905426" position_y="-0.663491666317" position_z="0.695156276226" normale_x="0.241942077875" normale_y="-0.938964545727" normale_z="0.24456012249" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.628208637238" position_y="-0.590871036053" position_z="0.344121485949" normale_x="0.773397684097" normale_y="-0.626894831657" normale_z="-0.0941217467189" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.613934874535" position_y="-0.50188845396" position_z="0.844679176807" normale_x="0.861778795719" normale_y="-0.275951504707" normale_z="0.425661832094" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="-0.543153107166" position_y="0.228397414088" position_z="-0.638035953045" normale_x="-0.672738611698" normale_y="0.345344483852" normale_z="-0.654339313507" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.345949709415" position_y="0.877680897713" position_z="0.399512410164" normale_x="-0.800942957401" normale_y="0.593095362186" normale_z="-0.0820258483291" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.0329385511577" position_y="0.710491359234" position_z="-0.181187406182" normale_x="0.310849517584" normale_y="0.849523067474" normale_z="-0.426243007183" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.530595004559" position_y="-0.388427108526" position_z="1.54449820518" normale_x="0.857925057411" normale_y="-0.342253029346" normale_z="0.383180677891" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.614850878716" position_y="-0.365096509457" position_z="0.715351641178" normale_x="0.971312582493" normale_y="-0.190021798015" normale_z="0.142981186509" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.605421423912" position_y="-0.162011042237" position_z="0.859317481518" normale_x="0.857429921627" normale_y="-0.218102380633" normale_z="0.466095745564" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.653675913811" position_y="0.0715157091618" position_z="1.54449820518" normale_x="0.91419750452" normale_y="-0.13196772337" normale_z="0.383180677891" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.72853410244" position_y="0.592496573925" position_z="0.87509816885" normale_x="0.856677234173" normale_y="0.487771779299" normale_z="0.167877316475" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.425490111113" position_y="0.631687700748" position_z="0.886420965195" normale_x="0.203470349312" normale_y="0.904528915882" normale_z="0.374736309052" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.573612689972" position_y="0.112331144512" position_z="-0.553464174271" normale_x="0.373442173004" normale_y="0.832401990891" normale_z="-0.409448206425" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.543153107166" position_y="0.228397414088" position_z="-0.638035953045" normale_x="-0.672738611698" normale_y="0.345344483852" normale_z="-0.654339313507" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.0329385511577" position_y="0.710491359234" position_z="-0.181187406182" normale_x="0.310849517584" normale_y="0.849523067474" normale_z="-0.426243007183" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.573612689972" position_y="0.112331144512" position_z="-0.553464174271" normale_x="0.373442173004" normale_y="0.832401990891" normale_z="-0.409448206425" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.83645927906" position_y="-0.0868016779423" position_z="-0.289925187826" normale_x="0.97084403038" normale_y="0.235161408782" normale_z="0.0464866869152" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.810026407242" position_y="0.1664647609" position_z="-1.83995616436" normale_x="0.149554133415" normale_y="0.919064700603" normale_z="-0.364628016949" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="-0.345949709415" position_y="0.877680897713" position_z="0.399512410164" normale_x="-0.800942957401" normale_y="0.593095362186" normale_z="-0.0820258483291" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.191116034985" position_y="0.779207587242" position_z="1.57195174694" normale_x="0.107350409031" normale_y="0.838854432106" normale_z="0.533665835857" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.0849047452211" position_y="0.922873258591" position_z="0.583706200123" normale_x="0.443149477243" normale_y="0.890007078648" normale_z="0.107265941799" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="-0.184414803982" position_y="-0.344222337008" position_z="1.91316688061" normale_x="0.138174414635" normale_y="-0.599569797516" normale_z="0.788304448128" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.191116034985" position_y="0.779207587242" position_z="1.57195174694" normale_x="0.107350409031" normale_y="0.838854432106" normale_z="0.533665835857" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-1.02350914478" position_y="0.0242647565901" position_z="1.25692605972" normale_x="-0.987128198147" normale_y="0.127078711987" normale_z="0.0971021726727" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.72853410244" position_y="0.592496573925" position_z="0.87509816885" normale_x="0.856677234173" normale_y="0.487771779299" normale_z="0.167877316475" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.720172703266" position_y="0.160459592938" position_z="0.928858578205" normale_x="0.992377519608" normale_y="-0.0534288324416" normale_z="0.111050114036" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.763820111752" position_y="0.364385902882" position_z="0.625265479088" normale_x="0.982347607613" normale_y="0.186850860715" normale_z="0.00894172489643" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.763820111752" position_y="0.364385902882" position_z="0.625265479088" normale_x="0.982347607613" normale_y="0.186850860715" normale_z="0.00894172489643" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.664093613625" position_y="0.608601868153" position_z="0.173059955239" normale_x="0.67203694582" normale_y="0.725663602352" normale_z="-0.147576123476" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.72853410244" position_y="0.592496573925" position_z="0.87509816885" normale_x="0.856677234173" normale_y="0.487771779299" normale_z="0.167877316475" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.715018868446" position_y="0.00922277662903" position_z="0.715351641178" normale_x="0.922457814217" normale_y="-0.374603271484" normale_z="0.093508683145" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.720172703266" position_y="0.160459592938" position_z="0.928858578205" normale_x="0.992377519608" normale_y="-0.0534288324416" normale_z="0.111050114036" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.653675913811" position_y="0.0715157091618" position_z="1.54449820518" normale_x="0.91419750452" normale_y="-0.13196772337" normale_z="0.383180677891" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.543782770634" position_y="-0.498694628477" position_z="0.928858578205" normale_x="0.886431276798" normale_y="-0.449341207743" normale_z="0.111050114036" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.335251748562" position_y="-0.877166152" position_z="0.87509816885" normale_x="0.498571962118" normale_y="-0.850437045097" normale_z="0.167877331376" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.479748487473" position_y="-0.697165429592" position_z="0.625265479088" normale_x="0.757737398148" normale_y="-0.652498364449" normale_z="0.00894172489643" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.763441741467" position_y="0.0261363536119" position_z="0.34511834383" normale_x="0.960591197014" normale_y="-0.228242307901" normale_z="0.158650562167" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.614850878716" position_y="-0.365096509457" position_z="0.715351641178" normale_x="0.971312582493" normale_y="-0.190021798015" normale_z="0.142981186509" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.65328592062" position_y="-0.414673298597" position_z="0.35764554143" normale_x="0.94323861599" normale_y="-0.290145128965" normale_z="0.161606684327" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="-0.138617292047" position_y="1.2656109333" position_z="-0.0198889002204" normale_x="0.304402202368" normale_y="0.92906165123" normale_z="-0.210199400783" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.206434607506" position_y="1.3525595665" position_z="0.628359138966" normale_x="0.703779041767" normale_y="0.604931533337" normale_z="0.372495502234" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.0971882268786" position_y="0.872793018818" position_z="0.0397452712059" normale_x="0.93978536129" normale_y="0.329402089119" normale_z="0.0910919308662" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.530595004559" position_y="-0.388427108526" position_z="1.54449820518" normale_x="0.857925057411" normale_y="-0.342253029346" normale_z="0.383180677891" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.605421423912" position_y="-0.162011042237" position_z="0.859317481518" normale_x="0.857429921627" normale_y="-0.218102380633" normale_z="0.466095745564" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.0531358905137" position_y="-0.759768247604" position_z="0.886420965195" normale_x="-0.192382544279" normale_y="-0.921508312225" normale_z="0.337359428406" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="-0.712835252285" position_y="-0.697653412819" position_z="0.856416106224" normale_x="-0.787521481514" normale_y="-0.604499042034" normale_z="0.119961932302" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.184414803982" position_y="-0.344222337008" position_z="1.91316688061" normale_x="0.138174414635" normale_y="-0.599569797516" normale_z="0.788304448128" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-1.02350914478" position_y="0.0242647565901" position_z="1.25692605972" normale_x="-0.987128198147" normale_y="0.127078711987" normale_z="0.0971021726727" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="-0.752183139324" position_y="-1.02723228931" position_z="-0.0198889002204" normale_x="-0.791790723801" normale_y="-0.291151434183" normale_z="0.53693407774" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.854362010956" position_y="-1.06868994236" position_z="0.628359138966" normale_x="0.614297628403" normale_y="-0.761940479279" normale_z="0.20514652133" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.712835252285" position_y="-0.697653412819" position_z="0.856416106224" normale_x="-0.787521481514" normale_y="-0.604499042034" normale_z="0.119961932302" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.802489280701" position_y="0.211251974106" position_z="0.293182820082" normale_x="0.96072947979" normale_y="0.256275951862" normale_z="-0.106402695179" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.664093613625" position_y="0.608601868153" position_z="0.173059955239" normale_x="0.67203694582" normale_y="0.725663602352" normale_z="-0.147576123476" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.763820111752" position_y="0.364385902882" position_z="0.625265479088" normale_x="0.982347607613" normale_y="0.186850860715" normale_z="0.00894172489643" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.83645927906" position_y="-0.0868016779423" position_z="-0.289925187826" normale_x="0.97084403038" normale_y="0.235161408782" normale_z="0.0464866869152" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.811340212822" position_y="-0.296999543905" position_z="-0.274373680353" normale_x="0.839700341225" normale_y="-0.538443744183" normale_z="0.0705814212561" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.896765828133" position_y="-0.236786052585" position_z="-1.60805463791" normale_x="0.974769771099" normale_y="-0.201916962862" normale_z="-0.0951493531466" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.413728505373" position_y="-0.177551105618" position_z="-0.943799197674" normale_x="-0.837089776993" normale_y="-0.0618417412043" normale_z="-0.543558955193" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.632021546364" position_y="-0.564188182354" position_z="-1.80158889294" normale_x="-0.178669944406" normale_y="-0.942501664162" normale_z="-0.28243175149" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.477313756943" position_y="-0.371916353703" position_z="-0.359774500132" normale_x="0.0793223381042" normale_y="-0.956869721413" normale_z="-0.27947857976" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.589730203152" position_y="-0.583810508251" position_z="0.293182820082" normale_x="0.692175447941" normale_y="-0.710141658783" normale_z="-0.128810077906" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.811340212822" position_y="-0.296999543905" position_z="-0.274373680353" normale_x="0.839700341225" normale_y="-0.538443744183" normale_z="0.0705814212561" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.65328592062" position_y="-0.414673298597" position_z="0.35764554143" normale_x="0.94323861599" normale_y="-0.290145128965" normale_z="0.161606684327" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="-0.543153107166" position_y="0.228397414088" position_z="-0.638035953045" normale_x="-0.672738611698" normale_y="0.345344483852" normale_z="-0.654339313507" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.573612689972" position_y="0.112331144512" position_z="-0.553464174271" normale_x="0.373442173004" normale_y="0.832401990891" normale_z="-0.409448206425" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.413728505373" position_y="-0.177551105618" position_z="-0.943799197674" normale_x="-0.837089776993" normale_y="-0.0618417412043" normale_z="-0.543558955193" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="-0.0971882268786" position_y="0.872793018818" position_z="0.0397452712059" normale_x="0.93978536129" normale_y="0.329402089119" normale_z="0.0910919308662" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.0849047452211" position_y="0.922873258591" position_z="0.583706200123" normale_x="0.443149477243" normale_y="0.890007078648" normale_z="0.107265941799" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.0329385511577" position_y="0.710491359234" position_z="-0.181187406182" normale_x="0.310849517584" normale_y="0.849523067474" normale_z="-0.426243007183" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="-0.520103514194" position_y="-0.707605481148" position_z="0.0397452712059" normale_x="0.656831383705" normale_y="-0.749098598957" normale_z="0.0861620828509" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.854362010956" position_y="-1.06868994236" position_z="0.628359138966" normale_x="0.614297628403" normale_y="-0.761940479279" normale_z="0.20514652133" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.752183139324" position_y="-1.02723228931" position_z="-0.0198889002204" normale_x="-0.791790723801" normale_y="-0.291151434183" normale_z="0.53693407774" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.810026407242" position_y="0.1664647609" position_z="-1.83995616436" normale_x="0.149554133415" normale_y="0.919064700603" normale_z="-0.364628016949" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.896765828133" position_y="-0.236786052585" position_z="-1.60805463791" normale_x="0.974769771099" normale_y="-0.201916962862" normale_z="-0.0951493531466" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.632021546364" position_y="-0.564188182354" position_z="-1.80158889294" normale_x="-0.178669944406" normale_y="-0.942501664162" normale_z="-0.28243175149" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="-0.184414803982" position_y="-0.344222337008" position_z="1.91316688061" normale_x="0.138174414635" normale_y="-0.599569797516" normale_z="0.788304448128" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.0531358905137" position_y="-0.759768247604" position_z="0.886420965195" normale_x="-0.192382544279" normale_y="-0.921508312225" normale_z="0.337359428406" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.605421423912" position_y="-0.162011042237" position_z="0.859317481518" normale_x="0.857429921627" normale_y="-0.218102380633" normale_z="0.466095745564" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="-0.0849047452211" position_y="0.922873258591" position_z="0.583706200123" normale_x="0.443149477243" normale_y="0.890007078648" normale_z="0.107265941799" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.0971882268786" position_y="0.872793018818" position_z="0.0397452712059" normale_x="0.93978536129" normale_y="0.329402089119" normale_z="0.0910919308662" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="-0.206434607506" position_y="1.3525595665" position_z="0.628359138966" normale_x="0.703779041767" normale_y="0.604931533337" normale_z="0.372495502234" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.632021546364" position_y="-0.564188182354" position_z="-1.80158889294" normale_x="-0.178669944406" normale_y="-0.942501664162" normale_z="-0.28243175149" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.811340212822" position_y="-0.296999543905" position_z="-0.274373680353" normale_x="0.839700341225" normale_y="-0.538443744183" normale_z="0.0705814212561" texcoords_u="0" texcoords_v="0"/>
+<sommet position_x="0.477313756943" position_y="-0.371916353703" position_z="-0.359774500132" normale_x="0.0793223381042" normale_y="-0.956869721413" normale_z="-0.27947857976" texcoords_u="0" texcoords_v="0"/>
+</primitive_triangle>
+</objet>
+</scene>

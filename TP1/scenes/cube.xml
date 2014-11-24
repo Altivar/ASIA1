@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<scene>
+<camera nom="Camera">
+<camera_pinhole position_x="7.48113155365" position_y="-6.50763988495" position_z="5.34366512299" visee_x="-0.654861867428" visee_y="0.610665619373" visee_z="-0.445245355368" verticale_x="-0.317370116711" verticale_y="0.312468618155" verticale_z="0.895343244076" xfov="49.1343421936"/>
+</camera>
+<lumiere nom="Lamp">
+<lumiere_point position_x="0.111978173256" position_y="-3.49996376038" position_z="5.90386199951" couleur_r="1.0" couleur_g="1.0" couleur_b="1.0"/>
+</lumiere>
+<objet nom="Cube">
+<materiau_miroir ns="5.0">
+<materiau_ca r="0.0" g="0.0" b="0.0"/>
+<materiau_td image="test.png"/>
+<materiau_cs r="1.0" g="1.0" b="1.0"/>
+<materiau_cr r="1.0" g="1.0" b="1.0"/>
+</materiau_miroir>
+<primitive_triangle>
+<sommet position_x="0.846693754196" position_y="1.28499627113" position_z="-1.0" normale_x="0.0" normale_y="-0.0" normale_z="-1.0" texcoords_u="0.0" texcoords_v="0.0"/>
+<sommet position_x="-1.13274431229" position_y="1.57104682922" position_z="-1.0" normale_x="0.0" normale_y="-0.0" normale_z="-1.0" texcoords_u="1.0" texcoords_v="0.0"/>
+<sommet position_x="-0.846693575382" position_y="3.55048489571" position_z="-1.0" normale_x="0.0" normale_y="-0.0" normale_z="-1.0" texcoords_u="1.0" texcoords_v="1.0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.846693754196" position_y="1.28499627113" position_z="-1.0" normale_x="-0.0" normale_y="-0.0" normale_z="-1.0" texcoords_u="0.0" texcoords_v="0.0"/>
+<sommet position_x="-0.846693575382" position_y="3.55048489571" position_z="-1.0" normale_x="-0.0" normale_y="-0.0" normale_z="-1.0" texcoords_u="1.0" texcoords_v="0.0"/>
+<sommet position_x="1.1327445507" position_y="3.26443386078" position_z="-1.0" normale_x="-0.0" normale_y="-0.0" normale_z="-1.0" texcoords_u="1.0" texcoords_v="1.0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.84669315815" position_y="1.28499591351" position_z="1.0" normale_x="0.687589406967" normale_y="-0.453792214394" normale_z="0.566827476025" texcoords_u="-0.00312499701977" texcoords_v="1.01250004768"/>
+<sommet position_x="1.13274431229" position_y="3.26443433762" position_z="0.590187966824" normale_x="0.604843854904" normale_y="0.715173959732" normale_z="0.350271552801" texcoords_u="0.993749976158" texcoords_v="0.996874988079"/>
+<sommet position_x="-0.969965934753" position_y="3.37684631348" position_z="1.61116075516" normale_x="-0.575895667076" normale_y="0.394511640072" normale_z="0.716033995152" texcoords_u="0.993749976158" texcoords_v="-5.96046447754e-08"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.84669315815" position_y="1.28499591351" position_z="1.0" normale_x="0.687589406967" normale_y="-0.453792214394" normale_z="0.566827476025" texcoords_u="-0.00312499701977" texcoords_v="1.01250004768"/>
+<sommet position_x="-0.969965934753" position_y="3.37684631348" position_z="1.61116075516" normale_x="-0.575895667076" normale_y="0.394511640072" normale_z="0.716033995152" texcoords_u="0.993750035763" texcoords_v="0.0"/>
+<sommet position_x="-1.13274478912" position_y="1.57104754448" position_z="1.0" normale_x="-0.483924210072" normale_y="-0.804093897343" normale_z="0.34532648325" texcoords_u="0.0218749642372" texcoords_v="0.0156249403954"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.846693754196" position_y="1.28499627113" position_z="-1.0" normale_x="-0.143025815487" normale_y="-0.989718973637" normale_z="-2.19600565288e-07" texcoords_u="0.993749976158" texcoords_v="-0.00312500004657"/>
+<sommet position_x="0.84669315815" position_y="1.28499591351" position_z="1.0" normale_x="-0.143025815487" normale_y="-0.989718973637" normale_z="-2.19600565288e-07" texcoords_u="0.987499952316" texcoords_v="0.996875047684"/>
+<sommet position_x="-1.13274478912" position_y="1.57104754448" position_z="1.0" normale_x="-0.143025815487" normale_y="-0.989718973637" normale_z="-2.19600565288e-07" texcoords_u="-0.00312495231628" texcoords_v="1.0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.846693754196" position_y="1.28499627113" position_z="-1.0" normale_x="-0.143025279045" normale_y="-0.989719033241" normale_z="3.19851210406e-07" texcoords_u="0.993749916553" texcoords_v="-0.00312501750886"/>
+<sommet position_x="-1.13274478912" position_y="1.57104754448" position_z="1.0" normale_x="-0.143025279045" normale_y="-0.989719033241" normale_z="3.19851210406e-07" texcoords_u="-0.00312498863786" texcoords_v="1.0"/>
+<sommet position_x="-1.13274431229" position_y="1.57104682922" position_z="-1.0" normale_x="-0.143025279045" normale_y="-0.989719033241" normale_z="3.19851210406e-07" texcoords_u="0.0218750238419" texcoords_v="0.00625004991889"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="-1.13274431229" position_y="1.57104682922" position_z="-1.0" normale_x="-0.995961725712" normale_y="0.0897783786058" normale_z="-2.69563031452e-07" texcoords_u="0.0" texcoords_v="0.0"/>
+<sommet position_x="-1.13274478912" position_y="1.57104754448" position_z="1.0" normale_x="-0.995961725712" normale_y="0.0897783786058" normale_z="-2.69563031452e-07" texcoords_u="1.0" texcoords_v="0.0"/>
+<sommet position_x="-0.969965934753" position_y="3.37684631348" position_z="1.61116075516" normale_x="-0.995961725712" normale_y="0.0897783786058" normale_z="-2.69563031452e-07" texcoords_u="1.0" texcoords_v="1.0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="-1.13274431229" position_y="1.57104682922" position_z="-1.0" normale_x="-0.989034414291" normale_y="0.142926439643" normale_z="-0.0371876992285" texcoords_u="0.0" texcoords_v="0.0"/>
+<sommet position_x="-0.969965934753" position_y="3.37684631348" position_z="1.61116075516" normale_x="-0.989034414291" normale_y="0.142926439643" normale_z="-0.0371876992285" texcoords_u="1.0" texcoords_v="0.0"/>
+<sommet position_x="-0.846693575382" position_y="3.55048489571" position_z="-1.0" normale_x="-0.989034414291" normale_y="0.142926439643" normale_z="-0.0371876992285" texcoords_u="1.0" texcoords_v="1.0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="-0.846693575382" position_y="3.55048489571" position_z="-1.0" normale_x="0.0872089937329" normale_y="0.993713676929" normale_z="0.0701977014542" texcoords_u="0.0" texcoords_v="0.0"/>
+<sommet position_x="-0.969965934753" position_y="3.37684631348" position_z="1.61116075516" normale_x="0.0872089937329" normale_y="0.993713676929" normale_z="0.0701977014542" texcoords_u="1.0" texcoords_v="0.0"/>
+<sommet position_x="1.13274431229" position_y="3.26443433762" position_z="0.590187966824" normale_x="0.0872089937329" normale_y="0.993713676929" normale_z="0.0701977014542" texcoords_u="1.0" texcoords_v="1.0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="-0.846693575382" position_y="3.55048489571" position_z="-1.0" normale_x="0.143025517464" normale_y="0.989718973637" normale_z="-2.75335281685e-07" texcoords_u="0.0" texcoords_v="0.0"/>
+<sommet position_x="1.13274431229" position_y="3.26443433762" position_z="0.590187966824" normale_x="0.143025517464" normale_y="0.989718973637" normale_z="-2.75335281685e-07" texcoords_u="1.0" texcoords_v="0.0"/>
+<sommet position_x="1.1327445507" position_y="3.26443386078" position_z="-1.0" normale_x="0.143025517464" normale_y="0.989718973637" normale_z="-2.75335281685e-07" texcoords_u="1.0" texcoords_v="1.0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.84669315815" position_y="1.28499591351" position_z="1.0" normale_x="0.989719033241" normale_y="-0.143025428057" normale_z="2.69384315743e-07" texcoords_u="0.0" texcoords_v="0.0"/>
+<sommet position_x="0.846693754196" position_y="1.28499627113" position_z="-1.0" normale_x="0.989719033241" normale_y="-0.143025428057" normale_z="2.69384315743e-07" texcoords_u="1.0" texcoords_v="0.0"/>
+<sommet position_x="1.1327445507" position_y="3.26443386078" position_z="-1.0" normale_x="0.989719033241" normale_y="-0.143025428057" normale_z="2.69384315743e-07" texcoords_u="1.0" texcoords_v="1.0"/>
+</primitive_triangle>
+<primitive_triangle>
+<sommet position_x="0.84669315815" position_y="1.28499591351" position_z="1.0" normale_x="0.989719033241" normale_y="-0.143025502563" normale_z="1.91277550243e-07" texcoords_u="0.0" texcoords_v="0.0"/>
+<sommet position_x="1.1327445507" position_y="3.26443386078" position_z="-1.0" normale_x="0.989719033241" normale_y="-0.143025502563" normale_z="1.91277550243e-07" texcoords_u="1.0" texcoords_v="0.0"/>
+<sommet position_x="1.13274431229" position_y="3.26443433762" position_z="0.590187966824" normale_x="0.989719033241" normale_y="-0.143025502563" normale_z="1.91277550243e-07" texcoords_u="1.0" texcoords_v="1.0"/>
+</primitive_triangle>
+</objet>
+</scene>
