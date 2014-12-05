@@ -78,6 +78,19 @@ bool PrimitiveSphere::calculerIntersection(const Rayon &rayon, Intersection &int
 	return false;
 }
 
+bool PrimitiveSphere::intersectionCube(const Vecteur3& vecMin, const Vecteur3& vecMax)
+{
+	float dist_squared = _rayon * _rayon;
+    // fonctionne seulement si les angles du cube sont dans le bon ordre
+    if (_centre._x < vecMin._x) dist_squared -= (_centre._x - vecMin._x)*(_centre._x - vecMin._x);
+    else if (_centre._x > vecMax._x) dist_squared -= (_centre._x - vecMax._x)*(_centre._x - vecMax._x);
+    if (_centre._y < vecMin._y) dist_squared -= (_centre._y - vecMin._y)*(_centre._y - vecMin._y);
+    else if (_centre._y > vecMax._y) dist_squared -= (_centre._y - vecMax._y)*(_centre._y - vecMax._y);
+    if (_centre._z < vecMin._z) dist_squared -= (_centre._z - vecMin._z)*(_centre._z - vecMin._z);
+    else if (_centre._z > vecMax._z) dist_squared -= (_centre._z - vecMax._z)*(_centre._z - vecMax._z);
+    return dist_squared > 0;
+}
+
 Sommet::Sommet(const Vecteur3 &position, const Vecteur3 &normale, const Vecteur2 &texcoords):
 _position(position), _normale(normale)
 {
@@ -153,11 +166,39 @@ bool PrimitiveTriangle::calculerIntersection(const Rayon &rayon, reel &distance)
 	return true;
 }
 
+bool PrimitiveTriangle::intersectionCube(const Vecteur3& vecMin, const Vecteur3& vecMax)
+{
+	// verifie si les sommet sont dans la case
+	if(_A._position._x >= vecMin._x && _A._position._x <= vecMax._x)
+		if(_A._position._y >= vecMin._y && _A._position._y <= vecMax._y)
+			if(_A._position._z >= vecMin._z && _A._position._z <= vecMax._z)
+				return true;
+
+	if(_B._position._x >= vecMin._x && _B._position._x <= vecMax._x)
+		if(_B._position._y >= vecMin._y && _B._position._y <= vecMax._y)
+			if(_B._position._z >= vecMin._z && _B._position._z <= vecMax._z)
+				return true;
+
+	if(_C._position._x >= vecMin._x && _C._position._x <= vecMax._x)
+		if(_C._position._y >= vecMin._y && _C._position._y <= vecMax._y)
+			if(_C._position._z >= vecMin._z && _C._position._z <= vecMax._z)
+				return true;
+
+	// si aucun sommet ne se trouve dans la case, verifie les axes
+
+
+	return false;
+}
+
 /// [PrimitiveBoite]
-PrimitiveBoite::PrimitiveBoite(Materiau* materiau, const Vecteur3& origine, const Vecteur3& dimensions)
+PrimitiveBoite::PrimitiveBoite(Materiau* materiau, const Vecteur3 posMin, const Vecteur3 posMax)
 	: Primitive(materiau)
-	, _origine(origine)
-	, _dimensions(dimensions)
+	, _sommetMin(posMin)
+	, _sommetMax(posMax)
+{
+}
+
+PrimitiveBoite::~PrimitiveBoite()
 {
 }
 
@@ -165,6 +206,87 @@ bool PrimitiveBoite::calculerIntersection(const Rayon& rayon, Intersection& inte
 {
 	// [TODO] - editer l'intersection
 	//        - return true en cas d'intersection, sinon false
+
+	float tmin, tmax, tymin, tymax, tzmin, tzmax;
+	
+	if (rayon._direction._x >= 0)
+	{
+		tmin = (_sommetMin._x - rayon._origine._x) / rayon._direction._x;
+		tmax = (_sommetMax._x - rayon._origine._x) / rayon._direction._x;
+	}
+	else 
+	{
+		tmin = (_sommetMax._x - rayon._origine._x) / rayon._direction._x;
+		tmax = (_sommetMin._x - rayon._origine._x) / rayon._direction._x;
+	}
+	
+	if (rayon._direction._y >= 0) 
+	{
+		tymin = (_sommetMin._y - rayon._origine._y) / rayon._direction._y;
+		tymax = (_sommetMax._y - rayon._origine._y) / rayon._direction._y;
+	}
+	else
+	{
+		tymin = (_sommetMax._y - rayon._origine._y) / rayon._direction._y;
+		tymax = (_sommetMin._y - rayon._origine._y) / rayon._direction._y;
+	}
+
+	if ( (tmin > tymax) || (tymin > tmax) )
+		return false;
+	if (tymin > tmin)
+		tmin = tymin;
+	if (tymax < tmax)
+		tmax = tymax;
+	if (rayon._direction._z >= 0)
+	{
+		tzmin = (_sommetMin._z - rayon._origine._z) / rayon._direction._z;
+		tzmax = (_sommetMax._z - rayon._origine._z) / rayon._direction._z;
+	}
+	else
+	{
+		tzmin = (_sommetMax._z - rayon._origine._z) / rayon._direction._z;
+		tzmax = (_sommetMin._z - rayon._origine._z) / rayon._direction._z;
+	}
+	if ( (tmin > tzmax) || (tzmin > tmax) )
+		return false;
+	if (tzmin > tmin)
+		tmin = tzmin;
+	if (tzmax < tmax)
+		tmax = tzmax;
+	
+	reel offset = 0.1;
+
+	reel distance = pow( (pow((double)tmin, 2) + pow((double)tymin, 2) + pow((double)tzmin, 2)), 0.5) ;
+	Vecteur3 position = rayon.calculerPosition(intersection._distance);
+	/*if( position._x < _sommetMin._x - offset && position._x > _sommetMin._x + offset
+		&& position._x < _sommetMax._x - offset && position._x > _sommetMin._x + offset
+		&& position._y < _sommetMin._y  - offset && position._y > _sommetMin._y + offset
+		&& position._y < _sommetMax._y - offset && position._y > _sommetMin._y + offset
+		&& position._z < _sommetMin._z  - offset && position._z > _sommetMin._z + offset
+		&& position._z < _sommetMax._z - offset && position._z > _sommetMin._z + offset)
+	{
+		return false;
+	}*/
+	//if( (int)(position._x+position._y+position._z)%2 == 1 )
+	//	return false;
+
+
+	// interpolation des normales
+	//Vecteur3 Nac = interpoler<Vecteur3>(_A._normale, _C._normale, vI._y);
+	//Vecteur3 Nbc = interpoler<Vecteur3>(_B._normale, _C._normale, vI._y);
+	intersection._normale = Vecteur3(-1.0, 0.0, 0.0);
+
+	// interpolation des coordonnees de texture
+	//Vecteur2 Tac = interpoler<Vecteur2>(_A._texcoords, _C._texcoords, vI._y);
+	//Vecteur2 Tbc = interpoler<Vecteur2>(_B._texcoords, _C._texcoords, vI._y);
+	intersection._texcoords = Vecteur2(0.0, 0.0);
+
+	intersection._distance = distance;
+	intersection._position = position + Vecteur3(0.1, 0.5, -0.6);
+	intersection._incidence = rayon._direction;
+	intersection._reflexion = VecteurReflechi(intersection._incidence, intersection._normale);
+	intersection._materiau = _materiau;
+
 	return true;
 }
 
@@ -172,6 +294,74 @@ bool PrimitiveBoite::calculerIntersection(const Rayon& rayon, reel& distance) co
 {
 	// [TODO] - editer la distance
 	//        - return true en cas d'intersection, sinon false
+
+	float tmin, tmax, tymin, tymax, tzmin, tzmax;
+	
+	if (rayon._direction._x >= 0)
+	{
+		tmin = (_sommetMin._x - rayon._origine._x) / rayon._direction._x;
+		tmax = (_sommetMax._x - rayon._origine._x) / rayon._direction._x;
+	}
+	else 
+	{
+		tmin = (_sommetMax._x - rayon._origine._x) / rayon._direction._x;
+		tmax = (_sommetMin._x - rayon._origine._x) / rayon._direction._x;
+	}
+	
+	if (rayon._direction._y >= 0) 
+	{
+		tymin = (_sommetMin._y - rayon._origine._y) / rayon._direction._y;
+		tymax = (_sommetMax._y - rayon._origine._y) / rayon._direction._y;
+	}
+	else
+	{
+		tymin = (_sommetMax._y - rayon._origine._y) / rayon._direction._y;
+		tymax = (_sommetMin._y - rayon._origine._y) / rayon._direction._y;
+	}
+
+	if ( (tmin > tymax) || (tymin > tmax) )
+		return false;
+	if (tymin > tmin)
+		tmin = tymin;
+	if (tymax < tmax)
+		tmax = tymax;
+	if (rayon._direction._z >= 0)
+	{
+		tzmin = (_sommetMin._z - rayon._origine._z) / rayon._direction._z;
+		tzmax = (_sommetMax._z - rayon._origine._z) / rayon._direction._z;
+	}
+	else
+	{
+		tzmin = (_sommetMax._z - rayon._origine._z) / rayon._direction._z;
+		tzmax = (_sommetMin._z - rayon._origine._z) / rayon._direction._z;
+	}
+	if ( (tmin > tzmax) || (tzmin > tmax) )
+		return false;
+	if (tzmin > tmin)
+		tmin = tzmin;
+	if (tzmax < tmax)
+		tmax = tzmax;
+
+	distance = pow( (pow((double)tmin, 2) + pow((double)tymin, 2) + pow((double)tzmin, 2)), 0.5) ;
+
 	return true;
+}
+
+bool PrimitiveBoite::intersectionCube(const Vecteur3& vecMin, const Vecteur3& vecMax)
+{
+	if(vecMin._x >= _sommetMin._x && vecMin._x <= _sommetMax._y)
+		return true;
+	if(vecMin._y >= _sommetMin._y && vecMin._y <= _sommetMax._y)
+		return true;
+	if(vecMin._z >= _sommetMin._z && vecMin._z <= _sommetMax._z)
+		return true;
+	if(vecMax._x >= _sommetMin._x && vecMax._x <= _sommetMax._y)
+		return true;
+	if(vecMax._y >= _sommetMin._y && vecMax._y <= _sommetMax._y)
+		return true;
+	if(vecMax._z >= _sommetMin._z && vecMax._z <= _sommetMax._z)
+		return true;
+
+	return false;
 }
 /// [PrimitiveBoite]

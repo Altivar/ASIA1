@@ -2,25 +2,38 @@
 
 #include "Vecteur3.h"
 #include "Primitive.h"
+#include "Materiau.h"
+#include <vector>
 
-class Case
+struct Case
 {
 
+	Case(void);
+	~Case(void);
+
+
+	//[Methods]
+	void InitialiserCase(Vecteur3 &position, Vecteur3 &dimension);
+	void AjouterPrimitive(Primitive* primitive);
+	bool calculerIntersection(const Rayon &rayon, Intersection &intersection);
+	bool calculerIntersection(const Rayon &rayon, reel &distance);
+	//[Methods]
+
+
+
+	// primitive boite
+	PrimitiveBoite* _boite;
+	
 	// position de la case
 	Vecteur3 _position;
 	// dimension de la case
 	Vecteur3 _dimension;
 
 	// tableau de primitives
-	Primitive** _primitiveData;
-
-	// primitive boite
-	PrimitiveBoite* _boite;
-
-public:
-	Case(void);
-	Case(Vecteur3& position, Vecteur3& dimension);
-	~Case(void);
+	std::vector<Primitive*> _primitiveData;
+	
+	// materiau fil de fer
+	MateriauFilDeFer* _materiau_fil_de_fer;
 
 };
 

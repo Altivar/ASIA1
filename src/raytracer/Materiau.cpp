@@ -56,3 +56,15 @@ Couleur MateriauMiroir::calculerReflexion(const Rendu *rendu, Intersection &inte
 
 	return C + _Cr->calculerCouleur(intersection._texcoords)*Cr;
 }
+
+//[Materiau fil de fer]
+MateriauFilDeFer::MateriauFilDeFer(Couleur coul)
+{
+	_couleur = new Couleur(coul);
+}
+	
+Couleur MateriauFilDeFer::calculerReflexion(const Rendu *rendu, Intersection &intersection, Scene &scene) const
+{
+	return *_couleur;
+}/**/
+//[Materiau fil de fer]

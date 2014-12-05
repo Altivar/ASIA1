@@ -7,6 +7,7 @@
 #include "Vecteur2.h"
 #include "Materiau.h"
 
+
 /// \brief Primitive geometrique.
 ///
 /// Classe abstraite a deriver.
@@ -33,6 +34,10 @@ struct Primitive
 	/// Si une intersection est detectee, distance est initialise.
 	///
 	virtual bool calculerIntersection(const Rayon &, reel &distance) const = 0;
+
+	// Si la primitive est en collision avec la primitive boite passée en parametre return true
+	// sinon return false
+	virtual bool intersectionCube(const Vecteur3& vecMin, const Vecteur3& vecMax) = 0;
 };
 
 struct Sommet
@@ -98,6 +103,10 @@ struct PrimitiveTriangle : Primitive
 	/// Si une intersection est detectee, distance est initialise.
 	///
 	bool calculerIntersection(const Rayon &, reel &distance) const;
+
+	// Si la primitive est en collision avec la primitive boite passée en parametre return true
+	// sinon return false
+	bool intersectionCube(const Vecteur3& vecMin, const Vecteur3& vecMax);
 };
 
 /// \brief Definit une primitive geometrique de type sphere.
@@ -125,6 +134,10 @@ struct PrimitiveSphere : Primitive
 	/// Si une intersection est detectee, distance est initialise.
 	///
 	bool calculerIntersection(const Rayon &, reel &distance) const;
+
+	// Si la primitive est en collision avec la primitive boite passée en parametre return true
+	// sinon return false
+	bool intersectionCube(const Vecteur3& vecMin, const Vecteur3& vecMax);
 };
 
 /// \brief Definit une primitive geometrique de type boite
@@ -132,20 +145,22 @@ struct PrimitiveSphere : Primitive
 struct PrimitiveBoite : Primitive
 {
 	// angle d'origine de la boite
-	Vecteur3 _origine;
+	Vecteur3 _sommetMin;
 
 	// dimensions de la boite
-	Vecteur3 _dimensions;
+	Vecteur3 _sommetMax;
 
 	/// [Methods]
 	
 	// constructeur
-	PrimitiveBoite(Materiau* materiau, const Vecteur3& origine, const Vecteur3& dimensions);
+	PrimitiveBoite(Materiau* materiau, const Vecteur3 posMin, const Vecteur3 posMax);
+	~PrimitiveBoite();
 	
 	// calculs d'intersection
 	bool calculerIntersection(const Rayon& rayon, Intersection& intersection) const;
 	bool calculerIntersection(const Rayon& rayon, reel& distance) const;
 
+	bool intersectionCube(const Vecteur3& vecMin, const Vecteur3& vecMax);
 	/// [Methods]
 
 };

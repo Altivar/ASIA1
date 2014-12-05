@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 	// definit les parametres du programme
 	const char cheminScene[] = ".\\scenes\\";
 	const char nomScene[] = "test.xml";
-	const char nomImage[] = "renduBase.png";
+	const char nomImage[] = "renduTEST.png";
 	const char nomXsd[] = "raytracer.xsd";
 	int nbRebonds = 5;
 	const int largeur = 800;
@@ -66,7 +66,7 @@ int main(int argc, char *argv[])
     Chronometre chrono;
     RenduWhitted rendu(nbRebonds);
     chrono.start();
-    scene.valider(Scene::PARTIONNEMENT_UNITAIRE);
+	scene.valider(Scene::PARTITIONNEMENT_GRILLE);
     rendu.calculerRendu(scene, image);
     chrono.stop();
     std::cout << "Temps de rendu : "<< chrono.elapsed() << " s.";

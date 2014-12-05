@@ -72,6 +72,13 @@ struct MateriauMiroir : MateriauPhong
 	Couleur calculerReflexion(const Rendu *rendu, Intersection &intersection, Scene &scene) const;
 };
 
+struct MateriauFilDeFer : Materiau
+{
+	MateriauFilDeFer(Couleur coul);
+	Couleur* _couleur;
+	Couleur calculerReflexion(const Rendu *rendu, Intersection &intersection, Scene &scene) const;
+};
+
 #endif /* MATERIAU_H_ */
 
 

@@ -127,7 +127,7 @@ void Scene::valider(TypePartitionnement typePartionnement)
 		_partitionnement = new PartitionnementUnitaire();
 		break;
 	case PARTITIONNEMENT_GRILLE :
-		_partitionnement = new PartitionnementUnitaire();
+		_partitionnement = new PartitionnementGrille();
 		break;
 
 	default:

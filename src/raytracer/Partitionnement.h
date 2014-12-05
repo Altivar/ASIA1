@@ -9,6 +9,8 @@
 #include "Rayon.h"
 #include "Case.h"
 
+#include <vector>
+
 /// \brief Partitionnement des primitives.
 ///
 class Partitionnement
@@ -72,11 +74,19 @@ class PartitionnementGrille : public Partitionnement
 	AutoSet<Primitive>::const_iterator _itDebut;
 	AutoSet<Primitive>::const_iterator _itFin;
 
+	int _dimension;
+	reel _offset;
+	reel _tailleCase;
+
 	// [TODO] declarer un tableau de case sur 3 dimensions
-	Case*** _caseData;
+	Case* _caseData;
+	
 
 public:
-	
+	// constructeur/destructeur
+	PartitionnementGrille();
+	~PartitionnementGrille();
+
 	// initialise les iterateurs
 	void initialiser(AutoSet<Primitive>::const_iterator itDebut, AutoSet<Primitive>::const_iterator itFin);
 
