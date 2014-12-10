@@ -125,7 +125,7 @@ public:
 	///
 	/// Unitaire : parcourt toutes les primitives.
 	///
-	enum TypePartitionnement {PARTIONNEMENT_UNITAIRE, PARTITIONNEMENT_GRILLE};
+	enum TypePartitionnement {PARTITIONNEMENT_UNITAIRE, PARTITIONNEMENT_GRILLE};
 
 	/// \brief Calcule le partitionnement de scene.
 	///

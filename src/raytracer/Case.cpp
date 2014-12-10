@@ -32,12 +32,19 @@ bool Case::calculerIntersection(const Rayon &rayon, Intersection &intersection)
 		return false;
 
 	bool result = false;
-
+	Intersection intersectionCourante;
 	std::vector<Primitive*>::iterator it;
 	for(it = _primitiveData.begin(); it != _primitiveData.end(); it++)
 	{
-		if( (*it)->calculerIntersection(rayon, intersection) )
-			result = true;
+		if( (*it)->calculerIntersection(rayon, intersectionCourante) )
+		{
+			// retient l'intersection la plus proche
+			if (!result || intersectionCourante._distance < intersection._distance )
+			{
+				result = true;
+				intersection = intersectionCourante;
+			}
+		}
 	}
 	return result;
 }

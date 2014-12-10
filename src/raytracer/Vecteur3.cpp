@@ -56,6 +56,10 @@ Vecteur3 Vecteur3::operator*(reel k) const {
   return Vecteur3(_x*k, _y*k, _z*k);
 }
 
+Vecteur3 Vecteur3::operator/(reel k) const {
+  return Vecteur3(_x/k, _y/k, _z/k);
+}
+
 Vecteur3 Vecteur3::operator*(const Vecteur3 & v) const {
   return Vecteur3(_x*v._x, _y*v._y, _z*v._z);
 }

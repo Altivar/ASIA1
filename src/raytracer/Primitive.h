@@ -107,6 +107,9 @@ struct PrimitiveTriangle : Primitive
 	// Si la primitive est en collision avec la primitive boite passée en parametre return true
 	// sinon return false
 	bool intersectionCube(const Vecteur3& vecMin, const Vecteur3& vecMax);
+
+	// test si le segment passé en parametre coupe le triangle
+	bool CheckLineTriangle( Vecteur3& L1, Vecteur3& L2 );
 };
 
 /// \brief Definit une primitive geometrique de type sphere.

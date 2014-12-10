@@ -55,6 +55,10 @@ struct Vecteur3
 	///
 	Vecteur3 operator*(const Vecteur3 & v) const;
 
+	/// \brief Retourne le vecteur multiplie par un scalaire.
+	///
+	Vecteur3 operator/(reel k) const;
+
 	/// \brief Retourne la soustraction membre a membre des 2 vecteurs.
 	///
 	Vecteur3 operator-(const Vecteur3 & v) const;

@@ -77,8 +77,8 @@ bool PartitionnementUnitaire::intersection(const Rayon &rayon, Intersection &int
 /// [PartitionnementGrille]
 PartitionnementGrille::PartitionnementGrille()
 {
-	_dimension = 1;
-	_tailleCase = 4;
+	_dimension = 4;
+	_tailleCase = 1.0;
 	_offset = -2.0;
 	_caseData = new Case[_dimension*_dimension*_dimension];
 }

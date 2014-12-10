@@ -123,7 +123,7 @@ void Scene::valider(TypePartitionnement typePartionnement)
 
 	switch (typePartionnement)
 	{
-	case PARTIONNEMENT_UNITAIRE :
+	case PARTITIONNEMENT_UNITAIRE :
 		_partitionnement = new PartitionnementUnitaire();
 		break;
 	case PARTITIONNEMENT_GRILLE :
