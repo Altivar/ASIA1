@@ -26,6 +26,11 @@ void Case::AjouterPrimitive(Primitive* primitive)
 	_primitiveData.push_back(primitive);
 }
 
+void Case::SetPrimitives( std::vector<Primitive*>& data )
+{
+	_primitiveData = data;
+}
+
 bool Case::calculerIntersection(const Rayon &rayon, Intersection &intersection)
 {
 	if(_primitiveData.size() <= 0 )

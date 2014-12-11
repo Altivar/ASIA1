@@ -9,7 +9,7 @@
 #include "Rayon.h"
 #include "Case.h"
 
-#include <vector>
+#include <qlist.h>
 
 /// \brief Partitionnement des primitives.
 ///
@@ -74,13 +74,16 @@ class PartitionnementGrille : public Partitionnement
 	AutoSet<Primitive>::const_iterator _itDebut;
 	AutoSet<Primitive>::const_iterator _itFin;
 
-	int _dimension;
-	reel _offset;
-	reel _tailleCase;
+	Vecteur3 _3DDimension;
+	Vecteur3 _3DOffset;
+	Vecteur3 _3DTailleCase;
 
 	// [TODO] declarer un tableau de case sur 3 dimensions
+	int _nbCases;
 	Case* _caseData;
 	
+	QList<int> _listCases;
+
 
 public:
 	// constructeur/destructeur
@@ -95,6 +98,10 @@ public:
 
 	// détermine l'intersection la plus proche (l'initialisation doit avoir été effectuée)
 	bool intersection(const Rayon& rayon, Intersection& intersection) const;
+
+	// divise les cases selectionnées en huit cases égales
+	bool diviserCases();
+	void AjouterPrimitive( Case& c );
 
 };
 /// [PartitionnementGrille]

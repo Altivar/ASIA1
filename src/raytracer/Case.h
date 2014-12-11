@@ -17,6 +17,8 @@ struct Case
 	void AjouterPrimitive(Primitive* primitive);
 	bool calculerIntersection(const Rayon &rayon, Intersection &intersection);
 	bool calculerIntersection(const Rayon &rayon, reel &distance);
+	int GetNbPrimitive() { return _primitiveData.size(); }
+	void SetPrimitives( std::vector<Primitive*>& data );
 	//[Methods]
 
 

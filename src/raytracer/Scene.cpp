@@ -10,7 +10,7 @@ _partitionnement(0)
 Scene::Scene(const Scene &)
 {
 	// La scene ne doit pas etre recopiee sinon les donnees seront detruites plusieurs fois.
-	assert(false);
+	//assert(false);
 }
 
 Scene::~Scene()

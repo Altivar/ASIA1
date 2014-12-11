@@ -91,6 +91,16 @@ bool PrimitiveSphere::intersectionCube(const Vecteur3& vecMin, const Vecteur3& v
     return dist_squared > 0;
 }
 
+Vecteur3 PrimitiveSphere::GetMaxPos()
+{
+	return Vecteur3( _centre._x+_rayon, _centre._y+_rayon, _centre._z+_rayon );
+}
+
+Vecteur3 PrimitiveSphere::GetMinPos()
+{
+	return Vecteur3( _centre._x-_rayon, _centre._y-_rayon, _centre._z-_rayon );
+}
+
 Sommet::Sommet(const Vecteur3 &position, const Vecteur3 &normale, const Vecteur2 &texcoords):
 _position(position), _normale(normale)
 {
@@ -166,52 +176,54 @@ bool PrimitiveTriangle::calculerIntersection(const Rayon &rayon, reel &distance)
 	return true;
 }
 
+Vecteur3 PrimitiveTriangle::GetMaxPos()
+{
+	reel x = _A._position._x, y = _A._position._y, z = _A._position._z;
+	if( x < _B._position._x )
+		x = _B._position._x;
+	if( x < _C._position._x )
+		x = _C._position._x;
+	
+	if( y < _B._position._y )
+		y = _B._position._y;
+	if( y < _C._position._y )
+		y = _C._position._y;
+	
+	if( z < _B._position._z )
+		z = _B._position._z;
+	if( z < _C._position._z )
+		z = _C._position._z;
+
+	return Vecteur3( x, y, z );
+}
+
+Vecteur3 PrimitiveTriangle::GetMinPos()
+{
+	reel x = _A._position._x, y = _A._position._y, z = _A._position._z;
+	if( x > _B._position._x )
+		x = _B._position._x;
+	if( x > _C._position._x )
+		x = _C._position._x;
+	
+	if( y > _B._position._y )
+		y = _B._position._y;
+	if( y > _C._position._y )
+		y = _C._position._y;
+	
+	if( z > _B._position._z )
+		z = _B._position._z;
+	if( z > _C._position._z )
+		z = _C._position._z;
+
+	return Vecteur3( x, y, z );
+}
+
+
+
+
+
 
 /// [ALGO INTERSECTION BOITE/TRIANGLE]
-
-/*int inline GetIntersection( float fDst1, float fDst2, Vecteur3 P1, Vecteur3 P2, Vecteur3 &Hit)
-{
-	if ( (fDst1 * fDst2) >= 0.0f) return 0;
-	if ( fDst1 == fDst2) return 0; 
-	Hit = P1 + (P2-P1) * ( -fDst1/(fDst2-fDst1) );
-	return 1;
-}
-
-int inline InBox( Vecteur3 Hit, Vecteur3 B1, Vecteur3 B2, const int Axis) 
-{
-	if ( Axis==1 && Hit._z > B1._z && Hit._z < B2._z && Hit._y > B1._y && Hit._y < B2._y) return 1;
-	if ( Axis==2 && Hit._z > B1._z && Hit._z < B2._z && Hit._x > B1._x && Hit._x < B2._x) return 1;
-	if ( Axis==3 && Hit._x > B1._x && Hit._x < B2._x && Hit._y > B1._y && Hit._y < B2._y) return 1;
-	return 0;
-}
-
-// returns true if line (L1, L2) intersects with the box (B1, B2)
-// returns intersection point in Hit
-int CheckLineBox( Vecteur3 B1, Vecteur3 B2, Vecteur3 L1, Vecteur3 L2, Vecteur3 &Hit)
-{
-	if (L2._x < B1._x && L1._x < B1._x) return false;
-	if (L2._x > B2._x && L1._x > B2._x) return false;
-	if (L2._y < B1._y && L1._y < B1._y) return false;
-	if (L2._y > B2._y && L1._y > B2._y) return false;
-	if (L2._z < B1._z && L1._z < B1._z) return false;
-	if (L2._z > B2._z && L1._z > B2._z) return false;
-	if (L1._x > B1._x && L1._x < B2._x &&
-		L1._y > B1._y && L1._y < B2._y &&
-		L1._z > B1._z && L1._z < B2._z) 
-		{Hit = L1; 
-		return true;}
-	if ( (GetIntersection( L1._x-B1._x, L2._x-B1._x, L1, L2, Hit) && InBox( Hit, B1, B2, 1 ))
-	  || (GetIntersection( L1._y-B1._y, L2._y-B1._y, L1, L2, Hit) && InBox( Hit, B1, B2, 2 )) 
-	  || (GetIntersection( L1._z-B1._z, L2._z-B1._z, L1, L2, Hit) && InBox( Hit, B1, B2, 3 )) 
-	  || (GetIntersection( L1._x-B2._x, L2._x-B2._x, L1, L2, Hit) && InBox( Hit, B1, B2, 1 )) 
-	  || (GetIntersection( L1._y-B2._y, L2._y-B2._y, L1, L2, Hit) && InBox( Hit, B1, B2, 2 )) 
-	  || (GetIntersection( L1._z-B2._z, L2._z-B2._z, L1, L2, Hit) && InBox( Hit, B1, B2, 3 )))
-		return true;
-
-	return false;
-}*/
-
-
 
 bool GetIntersection( float fDst1, float fDst2, Vecteur3 P1, Vecteur3 P2)
 {
@@ -318,54 +330,6 @@ bool PrimitiveTriangle::intersectionCube(const Vecteur3& vecMin, const Vecteur3&
 	if( CheckLineTriangle(A,B) )
 		return true;
 
-
-
-
-	
-	// crée une primitive boite temporaire
-	//PrimitiveBoite tempBoite( _materiau, vecMin, vecMax );
-	//reel dist;
-
-	// crée deux rayon par aretes : un pour chaque direction
-	// test chaque rayon avec la boite, return true si il y a intersection
-	/*Rayon rayAB( _A._position, _B._position-_A._position);
-	Rayon rayBA( _B._position, _A._position-_B._position);
-	if ( tempBoite.calculerIntersection( rayAB, dist ) )
-		if ( tempBoite.calculerIntersection( rayBA, dist ) )
-			return true;
-	Rayon rayAC( _A._position, _C._position-_A._position);
-	Rayon rayCA( _C._position, _A._position-_C._position);
-	if ( tempBoite.calculerIntersection( rayAC, dist ) )
-		if ( tempBoite.calculerIntersection( rayCA, dist ) )
-			return true;
-	Rayon rayBC( _B._position, _C._position-_B._position);
-	Rayon rayCB( _C._position, _B._position-_C._position);
-	if ( tempBoite.calculerIntersection( rayBC, dist ) )
-		if ( tempBoite.calculerIntersection( rayCB, dist ) )
-			return true;*/
-
-	// si aucune arete ne se trouve dans la case, test l'intersection entre les diagonale de la boite et le triangle
-	/*Rayon rayDiag11( vecMin, vecMax-vecMin );
-	Rayon rayDiag12( vecMin, vecMax-vecMin );
-	if( calculerIntersection( rayDiag11, dist ) )
-		if( calculerIntersection( rayDiag12, dist ) )
-			return true;
-	Rayon rayDiag21( Vecteur3(vecMin._x, vecMax._y, vecMin._z), Vecteur3(vecMax._x, vecMin._y, vecMax._z)-Vecteur3(vecMin._x, vecMax._y, vecMin._z) );
-	Rayon rayDiag22( Vecteur3(vecMax._x, vecMin._y, vecMax._z), Vecteur3(vecMin._x, vecMax._y, vecMin._z)-Vecteur3(vecMax._x, vecMin._y, vecMax._z) );
-	if( calculerIntersection( rayDiag21, dist ) )
-		if( calculerIntersection( rayDiag22, dist ) )
-			return true;
-	Rayon rayDiag31( Vecteur3(vecMin._x, vecMin._y, vecMax._z), Vecteur3(vecMax._x, vecMax._y, vecMin._z)-Vecteur3(vecMin._x, vecMin._y, vecMax._z) );
-	Rayon rayDiag32( Vecteur3(vecMax._x, vecMax._y, vecMin._z), Vecteur3(vecMin._x, vecMin._y, vecMax._z)-Vecteur3(vecMax._x, vecMax._y, vecMin._z) );
-	if( calculerIntersection( rayDiag31, dist ) )
-		if( calculerIntersection( rayDiag32, dist ) )
-			return true;
-	Rayon rayDiag41( Vecteur3(vecMin._x, vecMax._y, vecMax._z), Vecteur3(vecMax._x, vecMin._y, vecMin._z)-Vecteur3(vecMin._x, vecMax._y, vecMax._z) );
-	Rayon rayDiag42( Vecteur3(vecMax._x, vecMin._y, vecMin._z), Vecteur3(vecMin._x, vecMax._y, vecMax._z)-Vecteur3(vecMax._x, vecMin._y, vecMin._z) );
-	if( calculerIntersection( rayDiag41, dist ) )
-		if( calculerIntersection( rayDiag42, dist ) )
-			return true;*/
-
 	// si toujours aucune collision, return false
 	return false;
 }
@@ -438,31 +402,11 @@ bool PrimitiveBoite::calculerIntersection(const Rayon& rayon, Intersection& inte
 
 	reel distance = pow( (pow((double)tmin, 2) + pow((double)tymin, 2) + pow((double)tzmin, 2)), 0.5) ;
 	Vecteur3 position = rayon.calculerPosition(intersection._distance);
-	/*if( position._x < _sommetMin._x - offset && position._x > _sommetMin._x + offset
-		&& position._x < _sommetMax._x - offset && position._x > _sommetMin._x + offset
-		&& position._y < _sommetMin._y  - offset && position._y > _sommetMin._y + offset
-		&& position._y < _sommetMax._y - offset && position._y > _sommetMin._y + offset
-		&& position._z < _sommetMin._z  - offset && position._z > _sommetMin._z + offset
-		&& position._z < _sommetMax._z - offset && position._z > _sommetMin._z + offset)
-	{
-		return false;
-	}*/
-	//if( (int)(position._x+position._y+position._z)%2 == 1 )
-	//	return false;
-
-
-	// interpolation des normales
-	//Vecteur3 Nac = interpoler<Vecteur3>(_A._normale, _C._normale, vI._y);
-	//Vecteur3 Nbc = interpoler<Vecteur3>(_B._normale, _C._normale, vI._y);
+	
 	intersection._normale = Vecteur3(-1.0, 0.0, 0.0);
-
-	// interpolation des coordonnees de texture
-	//Vecteur2 Tac = interpoler<Vecteur2>(_A._texcoords, _C._texcoords, vI._y);
-	//Vecteur2 Tbc = interpoler<Vecteur2>(_B._texcoords, _C._texcoords, vI._y);
 	intersection._texcoords = Vecteur2(0.0, 0.0);
-
 	intersection._distance = distance;
-	intersection._position = position /*+ Vecteur3(0.1, 0.5, -0.6)*/;
+	intersection._position = position;
 	intersection._incidence = rayon._direction;
 	intersection._reflexion = VecteurReflechi(intersection._incidence, intersection._normale);
 	intersection._materiau = _materiau;
@@ -543,5 +487,15 @@ bool PrimitiveBoite::intersectionCube(const Vecteur3& vecMin, const Vecteur3& ve
 		return true;
 
 	return false;
+}
+
+Vecteur3 PrimitiveBoite::GetMaxPos()
+{
+	return _sommetMax;
+}
+
+Vecteur3 PrimitiveBoite::GetMinPos()
+{
+	return _sommetMin;
 }
 /// [PrimitiveBoite]

@@ -38,6 +38,11 @@ struct Primitive
 	// Si la primitive est en collision avec la primitive boite passée en parametre return true
 	// sinon return false
 	virtual bool intersectionCube(const Vecteur3& vecMin, const Vecteur3& vecMax) = 0;
+
+	// retourne la valeur max de l'AABB englobante
+	virtual Vecteur3 GetMaxPos() = 0;
+	// retourne la valeur min de l'AABB englobante
+	virtual Vecteur3 GetMinPos() = 0;
 };
 
 struct Sommet
@@ -108,8 +113,14 @@ struct PrimitiveTriangle : Primitive
 	// sinon return false
 	bool intersectionCube(const Vecteur3& vecMin, const Vecteur3& vecMax);
 
+	// retourne la valeur max de l'AABB englobante
+	virtual Vecteur3 GetMaxPos();
+	// retourne la valeur min de l'AABB englobante
+	virtual Vecteur3 GetMinPos();
+
 	// test si le segment passé en parametre coupe le triangle
 	bool CheckLineTriangle( Vecteur3& L1, Vecteur3& L2 );
+
 };
 
 /// \brief Definit une primitive geometrique de type sphere.
@@ -141,6 +152,11 @@ struct PrimitiveSphere : Primitive
 	// Si la primitive est en collision avec la primitive boite passée en parametre return true
 	// sinon return false
 	bool intersectionCube(const Vecteur3& vecMin, const Vecteur3& vecMax);
+
+	// retourne la valeur max de l'AABB englobante
+	virtual Vecteur3 GetMaxPos();
+	// retourne la valeur min de l'AABB englobante
+	virtual Vecteur3 GetMinPos();
 };
 
 /// \brief Definit une primitive geometrique de type boite
@@ -164,6 +180,11 @@ struct PrimitiveBoite : Primitive
 	bool calculerIntersection(const Rayon& rayon, reel& distance) const;
 
 	bool intersectionCube(const Vecteur3& vecMin, const Vecteur3& vecMax);
+
+	// retourne la valeur max de l'AABB englobante
+	virtual Vecteur3 GetMaxPos();
+	// retourne la valeur min de l'AABB englobante
+	virtual Vecteur3 GetMinPos();
 	/// [Methods]
 
 };
