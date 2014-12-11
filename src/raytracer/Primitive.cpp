@@ -225,7 +225,7 @@ Vecteur3 PrimitiveTriangle::GetMinPos()
 
 /// [ALGO INTERSECTION BOITE/TRIANGLE]
 
-bool GetIntersection( float fDst1, float fDst2, Vecteur3 P1, Vecteur3 P2)
+bool GetIntersection( float fDst1, float fDst2, Vecteur3& P1, Vecteur3& P2)
 {
 	if ( (fDst1 * fDst2) >= 0.0f) return false;
 	if ( fDst1 == fDst2) return false; 
@@ -233,7 +233,7 @@ bool GetIntersection( float fDst1, float fDst2, Vecteur3 P1, Vecteur3 P2)
 }
 
 // returns true if line (L1, L2) intersects with the box (B1, B2)
-bool CheckLineBox( Vecteur3 B1, Vecteur3 B2, Vecteur3 L1, Vecteur3 L2)
+bool CheckLineBox( Vecteur3 B1, Vecteur3 B2, Vecteur3& L1, Vecteur3& L2)
 {
 	if (L2._x < B1._x && L1._x < B1._x) return false;
 	if (L2._x > B2._x && L1._x > B2._x) return false;
@@ -283,24 +283,6 @@ bool PrimitiveTriangle::CheckLineTriangle( Vecteur3& L1, Vecteur3& L2 )
 
 bool PrimitiveTriangle::intersectionCube(const Vecteur3& vecMin, const Vecteur3& vecMax)
 {
-	// verifie si les sommet sont dans la case
-	// verifie pour le point A
-	if(_A._position._x >= vecMin._x && _A._position._x <= vecMax._x)
-		if(_A._position._y >= vecMin._y && _A._position._y <= vecMax._y)
-			if(_A._position._z >= vecMin._z && _A._position._z <= vecMax._z)
-				return true;
-	// verifie pour le point B
-	if(_B._position._x >= vecMin._x && _B._position._x <= vecMax._x)
-		if(_B._position._y >= vecMin._y && _B._position._y <= vecMax._y)
-			if(_B._position._z >= vecMin._z && _B._position._z <= vecMax._z)
-				return true;
-	// verifie pour le point C
-	if(_C._position._x >= vecMin._x && _C._position._x <= vecMax._x)
-		if(_C._position._y >= vecMin._y && _C._position._y <= vecMax._y)
-			if(_C._position._z >= vecMin._z && _C._position._z <= vecMax._z)
-				return true;
-
-
 	
 	// si aucun sommet ne se trouve dans la case, verifie si les aretes du triangle passe dans la boîte
 	if( CheckLineBox(vecMin, vecMax, _A._position, _B._position) )
@@ -403,7 +385,33 @@ bool PrimitiveBoite::calculerIntersection(const Rayon& rayon, Intersection& inte
 	reel distance = pow( (pow((double)tmin, 2) + pow((double)tymin, 2) + pow((double)tzmin, 2)), 0.5) ;
 	Vecteur3 position = rayon.calculerPosition(intersection._distance);
 	
-	intersection._normale = Vecteur3(-1.0, 0.0, 0.0);
+	// calcul de la normale
+	Vecteur3 centreCube = (_sommetMax-_sommetMin) / 2;
+	Vecteur3 direction = position - centreCube;
+	if( abs(direction._x) >= abs(direction._y) && abs(direction._x) >= abs(direction._z) )
+	{
+		if( direction._x < 0 )
+			intersection._normale = Vecteur3(-1.0, 0.0, 0.0);
+		if( direction._x > 0 )
+			intersection._normale = Vecteur3(1.0, 0.0, 0.0);
+	}
+	else if( abs(direction._y) >= abs(direction._x) && abs(direction._y) >= abs(direction._z) )
+	{
+		if( direction._y < 0 )
+			intersection._normale = Vecteur3(0.0, -1.0, 0.0);
+		if( direction._y > 0 )
+			intersection._normale = Vecteur3(0.0, 1.0, 0.0);
+	}
+	else //if( abs(direction._z) >= abs(direction._x) && abs(direction._z) >= abs(direction._y) )
+	{
+		if( direction._z < 0 )
+			intersection._normale = Vecteur3(0.0, 0.0, -1.0);
+		if( direction._z > 0 )
+			intersection._normale = Vecteur3(0.0, 0.0, 1.0);
+	}
+	intersection._normale = Vecteur3(0.0, 0.0, 0.0);
+	
+	
 	intersection._texcoords = Vecteur2(0.0, 0.0);
 	intersection._distance = distance;
 	intersection._position = position;
@@ -489,12 +497,12 @@ bool PrimitiveBoite::intersectionCube(const Vecteur3& vecMin, const Vecteur3& ve
 	return false;
 }
 
-Vecteur3 PrimitiveBoite::GetMaxPos()
+inline Vecteur3 PrimitiveBoite::GetMaxPos()
 {
 	return _sommetMax;
 }
 
-Vecteur3 PrimitiveBoite::GetMinPos()
+inline Vecteur3 PrimitiveBoite::GetMinPos()
 {
 	return _sommetMin;
 }

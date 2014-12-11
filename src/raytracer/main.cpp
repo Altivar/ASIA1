@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 	// definit les parametres du programme
 	const char cheminScene[] = ".\\scenes\\";
 	const char nomScene[] = "teapot.xml";
-	const char nomImage[] = "renduTeapotTest.png";
+	const char nomImage[] = "Rendus\\steapot_testOptions.png";
 	const char nomXsd[] = "raytracer.xsd";
 	int nbRebonds = 5;
 	const int largeur = 800;

@@ -81,8 +81,6 @@ class PartitionnementGrille : public Partitionnement
 	// [TODO] declarer un tableau de case sur 3 dimensions
 	int _nbCases;
 	Case* _caseData;
-	
-	QList<int> _listCases;
 
 
 public:
@@ -99,8 +97,7 @@ public:
 	// détermine l'intersection la plus proche (l'initialisation doit avoir été effectuée)
 	bool intersection(const Rayon& rayon, Intersection& intersection) const;
 
-	// divise les cases selectionnées en huit cases égales
-	bool diviserCases();
+	// ajoute les primitives incluses dans les cases aux cases
 	void AjouterPrimitive( Case& c );
 
 };
