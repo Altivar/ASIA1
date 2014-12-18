@@ -123,7 +123,6 @@ void Case::Subdiviser()
 	if( _primitiveData.size() < 40 )
 		return;
 
-	printf("SUB !!! \n");
 
 	Vecteur3 dimensionSubdivision = _dimension /2;
 

@@ -117,9 +117,14 @@ void PartitionnementGrille::initialiser( AutoSet<Primitive>::const_iterator itDe
 		// [INIT THE GRID VALUES]
 		reel xmin = 9999, ymin = 9999, zmin = 9999, xmax = -9999, ymax = -9999, zmax = -9999;
 
+		int nbPrimitive = 0;
+
 		AutoSet<Primitive>::iterator it;
 		for(it = _itDebut; it != _itFin; it++)
 		{
+			// incremente le nombre de poly
+			nbPrimitive++;
+			
 			Vecteur3 vecMin = (*it)->GetMinPos();
 			Vecteur3 vecMax = (*it)->GetMaxPos();
 
@@ -141,9 +146,10 @@ void PartitionnementGrille::initialiser( AutoSet<Primitive>::const_iterator itDe
 		_3DOffset._x = xmin;
 		_3DOffset._y = ymin;
 		_3DOffset._z = zmin;
-		_3DDimension._x = (int)(xmax-xmin+0.5);
-		_3DDimension._y = (int)(ymax-ymin+0.5);
-		_3DDimension._z = (int)(zmax-zmin+0.5);
+		int nbCaseSurUnAxe = (int)(pow( (nbPrimitive/40), 0.333) );
+		_3DDimension._x = (nbCaseSurUnAxe > (xmax-xmin+0.5)) ? nbCaseSurUnAxe : (int)(xmax-xmin+0.5);
+		_3DDimension._y = (nbCaseSurUnAxe > (ymax-ymin+0.5)) ? nbCaseSurUnAxe : (int)(ymax-ymin+0.5);
+		_3DDimension._z = (nbCaseSurUnAxe > (zmax-zmin+0.5)) ? nbCaseSurUnAxe : (int)(zmax-zmin+0.5);
 		_3DTailleCase._x = (xmax-xmin) / _3DDimension._x;
 		_3DTailleCase._y = (ymax-ymin) / _3DDimension._y;
 		_3DTailleCase._z = (zmax-zmin) / _3DDimension._z;
