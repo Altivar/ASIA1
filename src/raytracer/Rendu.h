@@ -43,6 +43,14 @@ struct RenduWhitted : Rendu
 	/// La scene doit avoir ete validee.
 	///
 	void calculerRendu(Scene &scene, Image &image) const;
+
+	/// \brief Calcule le rendu fil de fer de la scene dans l'image.
+	///
+	/// La scene doit avoir ete validee.
+	///
+	void calculerProjectionPrimitives(Scene &scene, Image &image) const;
+	void calculerProjectionPartition(Scene &scene, Image &image) const;
+	void calculerProjectionBoite(Scene &scene, Image &image, Case &c_case, CameraPinhole* camera) const;
 };
 
 #endif

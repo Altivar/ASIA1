@@ -84,3 +84,115 @@ int Image::getHauteur() const
 	return _hauteur;
 }
 
+
+
+void Image::tracerDroiteBresenham(Vecteur2 a, Vecteur2 b, std::list<Vecteur2> &pixels)
+{
+	
+	std::list<Vecteur2> pixelsTraces;
+	
+	int x1 = a._u, x2 = b._u;
+	int y1 = a._v, y2 = b._v;
+	
+	int xbas, ybas, xhaut, yhaut, dx, dy;
+	
+	if (y1 < y2)
+	{
+		xbas = x1;
+		ybas = y1;
+		xhaut = x2;
+		yhaut = y2;
+	}
+	else
+	{
+		xbas = x2;
+		ybas = y2;
+		xhaut = x1;
+		yhaut = y1;
+	}
+	
+	int deltaE, deltaNE, incEx, incEy, incNEx, incNEy, N, di;
+	deltaE = deltaNE = incEx = incEy = incNEx = incNEy = N = di = 0;
+	if (xbas <= xhaut)
+	{
+		// cas 1
+		dx = xhaut - xbas;
+		dy = yhaut - ybas;
+		if (dx >= dy)
+		{
+			// cas 1.a
+			di = 2*dy - dx;
+			deltaE = 2*dy;
+			deltaNE = 2*(dy - dx);
+			incEx = 1;
+			incEy = 0;
+			incNEx = 1;
+			incNEy = 1;
+			N = dx;
+		}
+		else
+		{
+			// cas 1.b
+			di = 2*dx - dy;
+			deltaE = 2*dx;
+			deltaNE = 2*(dx - dy);
+			incEx = 0;
+			incEy = 1;
+			incNEx = 1;
+			incNEy = 1;
+			N = dy;
+		}
+	}
+	else
+	{
+		// cas 2
+		dx = xbas - xhaut;
+		dy = yhaut - ybas;
+		if (dx >= dy)
+		{
+			// cas 2.a
+			di = 2*dy - dx;
+			deltaE = 2*dy;
+			deltaNE = 2*(dy - dx);
+			incEx = -1;
+			incEy = 0;
+			incNEx = -1;
+			incNEy = 1;
+			N = dx;
+		}
+		else
+		{
+			// cas 2.b
+			di = 2*dx - dy;
+			deltaE = 2*dx;
+			deltaNE = 2*(dx - dy);
+			incEx = 0;
+			incEy = 1;
+			incNEx = -1;
+			incNEy = 1;
+			N = dy;
+		}
+	}
+	
+	int x = xbas;
+	int y = ybas;
+	
+	int i;
+	for (i = 0; i < N; ++i)
+	{
+		if (di <= 0)
+		{
+			di += deltaE;
+			x += incEx;
+			y += incEy;
+		}
+		else
+		{
+			di += deltaNE;
+			x += incNEx;
+			y += incNEy;
+		}
+		pixels.push_back(Vecteur2(x,y));
+	}
+
+}

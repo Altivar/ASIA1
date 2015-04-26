@@ -6,6 +6,7 @@
 #include "Base.h"
 #include "Vecteur2.h"
 #include "Materiau.h"
+#include "Camera.h"
 
 
 /// \brief Primitive geometrique.
@@ -121,6 +122,9 @@ struct PrimitiveTriangle : Primitive
 	// test si le segment passé en parametre coupe le triangle
 	bool CheckLineTriangle( Vecteur3& L1, Vecteur3& L2 );
 
+
+	void calculerProjectionSurImage(Vecteur2 &a, Vecteur2 &b, Vecteur2 &c, const CameraPinhole &camera);
+
 };
 
 /// \brief Definit une primitive geometrique de type sphere.
@@ -186,6 +190,11 @@ struct PrimitiveBoite : Primitive
 	// retourne la valeur min de l'AABB englobante
 	virtual Vecteur3 GetMinPos();
 	/// [Methods]
+
+
+	void calculerProjectionSurImage(Vecteur2 &a, Vecteur2 &b, Vecteur2 &c, Vecteur2 &d,
+									Vecteur2 &e, Vecteur2 &f, Vecteur2 &g, Vecteur2 &h,
+									const CameraPinhole &camera);
 
 };
 

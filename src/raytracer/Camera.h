@@ -66,6 +66,8 @@ struct CameraPinhole : Camera
 	Vecteur3 ecranVersCamera(const Vecteur2 &uv) const;
 	Vecteur3 cameraVersMonde(const Vecteur3 &UVW) const;
 
+	Vecteur2 mondeVersImage(const Vecteur3 &P) const;
+
 	/*
 	Vecteur3 mondeVersCamera(const Vecteur3 &XYZ) const;
 	void cameraVersEcran(const Vecteur3 &UVW, reel &u, reel &v) const;

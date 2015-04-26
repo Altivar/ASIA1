@@ -59,6 +59,22 @@ Vecteur3 CameraPinhole::cameraVersMonde(const Vecteur3 &UVW) const
 }
 
 
+Vecteur2 CameraPinhole::mondeVersImage(const Vecteur3 &P) const
+{
+	// UVW : Dans le repere camera
+	Vecteur3 dist = P-_position;
+	Vecteur3 UVW = _mondeVersCamera*(dist);
+	// Distance focale
+	reel distance = 1;
+	// UVW' : Projete dans le repere camera
+	Vecteur3 UVW_ = Vecteur3(UVW._x*distance/UVW._z, UVW._y*distance/UVW._z, distance);
+	// uv' : Projete dans le plan image
+	Vecteur2 uv_ = Vecteur2(UVW_._x/_dU, UVW_._y/_dV);
+	// xy : Projete dans les coordonnees image
+	Vecteur2 xy = Vecteur2(int((uv_._u+0.5)*(1./_invNbX)), int((uv_._v+0.5)*(1./_invNbY)));
+	return xy;
+}
+
 /*
 void CameraPinhole::ecranVersImage(reel u, reel v, int &x, int &y) const;
 void CameraPinhole::cameraVersEcran(const Vecteur3 &UVW, reel &u, reel &v) const;

@@ -100,6 +100,10 @@ public:
 	// ajoute les primitives incluses dans les cases aux cases
 	void AjouterPrimitive( Case& c );
 
+	// retourne le nombre de cases et le tableau de cases pour le rendu de l'armature
+	int GetNbCases() { return _nbCases; }
+	Case* GetCasesTable() { return _caseData; }
+
 };
 /// [PartitionnementGrille]
 

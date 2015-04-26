@@ -3,6 +3,7 @@
 
 #include "Base.h"
 #include "Couleur.h"
+#include "Vecteur2.h"
 
 #include <QImage>
 
@@ -55,7 +56,9 @@ struct Image
 	///
 	void enregistrer(const char *nom) const;
 
-
+	/// \brief Dessine un trait.
+	///
+	void Image::tracerDroiteBresenham(Vecteur2 a, Vecteur2 b, std::list<Vecteur2> &pixels);
 
 	// private:
 	int _largeur, _hauteur;

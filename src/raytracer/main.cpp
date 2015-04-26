@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 
 	// definit les parametres du programme
 	const char cheminScene[] = ".\\scenes\\";
-	const char nomScene[] = "teapot.xml";
+	const char nomScene[] = "suzanne.xml";
 	const char nomImage[] = "Rendus\\steapot_testOptions.png";
 	const char nomXsd[] = "raytracer.xsd";
 	int nbRebonds = 5;
@@ -66,12 +66,17 @@ int main(int argc, char *argv[])
     Chronometre chrono;
     RenduWhitted rendu(nbRebonds);
     chrono.start();
-	std::cout << "Construction de la scene..." << std::endl;
+	std::cout << std::endl << "Construction de la scene..." << std::endl;
 	scene.valider(Scene::PARTITIONNEMENT_GRILLE);
 	std::cout << "Rendu en cours..." << std::endl;
     rendu.calculerRendu(scene, image);
     chrono.stop();
     std::cout << "Temps de rendu : "<< chrono.elapsed() << " s.";
+	
+	// rendu fil de fer
+	//rendu.calculerProjectionPrimitives(scene, image);
+	rendu.calculerProjectionPartition(scene, image);
+	
 	
     // enregistre l'image
     image.enregistrer(nomImage);

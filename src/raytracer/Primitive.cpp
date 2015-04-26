@@ -218,7 +218,13 @@ Vecteur3 PrimitiveTriangle::GetMinPos()
 	return Vecteur3( x, y, z );
 }
 
-
+void PrimitiveTriangle::calculerProjectionSurImage(Vecteur2 &a, Vecteur2 &b, Vecteur2 &c, const CameraPinhole &camera)
+{
+	// Projection de chaque sommet
+	a = camera.mondeVersImage((const Vecteur3 &)_A);
+	b = camera.mondeVersImage((const Vecteur3 &)_B);
+	c = camera.mondeVersImage((const Vecteur3 &)_C);
+}
 
 
 
@@ -506,4 +512,31 @@ inline Vecteur3 PrimitiveBoite::GetMinPos()
 {
 	return _sommetMin;
 }
+
+void PrimitiveBoite::calculerProjectionSurImage(Vecteur2 &a, Vecteur2 &b, Vecteur2 &c, Vecteur2 &d,
+												Vecteur2 &e, Vecteur2 &f, Vecteur2 &g, Vecteur2 &h,
+												const CameraPinhole &camera)
+{
+	
+	Vecteur3 A = _sommetMin;
+	Vecteur3 B = Vecteur3( _sommetMax._x, _sommetMin._y, _sommetMin._z );
+	Vecteur3 C = Vecteur3( _sommetMin._x, _sommetMax._y, _sommetMin._z );
+	Vecteur3 D = Vecteur3( _sommetMin._x, _sommetMin._y, _sommetMax._z );
+	Vecteur3 E = _sommetMax;
+	Vecteur3 F = Vecteur3( _sommetMin._x, _sommetMax._y, _sommetMax._z );
+	Vecteur3 G = Vecteur3( _sommetMax._x, _sommetMin._y, _sommetMax._z );
+	Vecteur3 H = Vecteur3( _sommetMax._x, _sommetMax._y, _sommetMin._z );
+
+	// Projection de chaque sommet
+	a = camera.mondeVersImage((const Vecteur3 &)A);
+	b = camera.mondeVersImage((const Vecteur3 &)B);
+	c = camera.mondeVersImage((const Vecteur3 &)C);
+	d = camera.mondeVersImage((const Vecteur3 &)D);
+	e = camera.mondeVersImage((const Vecteur3 &)E);
+	f = camera.mondeVersImage((const Vecteur3 &)F);
+	g = camera.mondeVersImage((const Vecteur3 &)G);
+	h = camera.mondeVersImage((const Vecteur3 &)H);
+
+}
+
 /// [PrimitiveBoite]

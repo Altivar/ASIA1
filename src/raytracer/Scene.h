@@ -140,6 +140,10 @@ public:
 	/// \brief Determine l'intersection la plus proche.
 	///
 	bool intersection(const Rayon &rayon, Intersection &intersection) const;
+
+	// retourne le partitionnement pour avoir accès aux cases du partitionnement grille (pour le rendu de l'armature)
+	Partitionnement* GetPatitionnement() { return _partitionnement; }
+
 };
 
 #endif
