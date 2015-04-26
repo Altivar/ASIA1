@@ -1,6 +1,7 @@
 #include "Image.h"
 
 #include <QColor>
+#include <math.h>
 
 bool Image::creer(int largeur, int hauteur)
 {
@@ -195,4 +196,35 @@ void Image::tracerDroiteBresenham(Vecteur2 a, Vecteur2 b, std::list<Vecteur2> &p
 		pixels.push_back(Vecteur2(x,y));
 	}
 
+}
+
+void Image::tracerCercleBresenham(Vecteur2 center, int r, std::list<Vecteur2> &pixels)
+{
+	int x = 0, y = r;
+	int d=1-r;
+	Draw8Points(center._u, center._v, x, y, pixels);
+	while(x<y)
+	{
+		if(d<0)
+			d+=2*x+2;
+		else
+		{
+			d+=2*(x-y)+5;
+			y--;
+		}
+		x++;
+		Draw8Points(center._u, center._v, x, y, pixels);
+	}
+}
+
+void Image::Draw8Points(int xc, int yc, int a, int b, std::list<Vecteur2> &pixels)
+{
+        pixels.push_back(Vecteur2(xc+a, yc+b));
+        pixels.push_back(Vecteur2(xc-a, yc+b));
+        pixels.push_back(Vecteur2(xc-a, yc-b));
+        pixels.push_back(Vecteur2(xc+a, yc-b));
+        pixels.push_back(Vecteur2(xc+b, yc+a));
+        pixels.push_back(Vecteur2(xc-b, yc+a));
+        pixels.push_back(Vecteur2(xc-b, yc-a));
+        pixels.push_back(Vecteur2(xc+b, yc-a));
 }

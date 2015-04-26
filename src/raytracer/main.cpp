@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 
 	// definit les parametres du programme
 	const char cheminScene[] = ".\\scenes\\";
-	const char nomScene[] = "suzanne.xml";
+	const char nomScene[] = "test.xml";
 	const char nomImage[] = "Rendus\\steapot_testOptions.png";
 	const char nomXsd[] = "raytracer.xsd";
 	int nbRebonds = 5;
@@ -71,17 +71,31 @@ int main(int argc, char *argv[])
 	std::cout << "Rendu en cours..." << std::endl;
     rendu.calculerRendu(scene, image);
     chrono.stop();
-    std::cout << "Temps de rendu : "<< chrono.elapsed() << " s.";
+    std::cout << "Temps de rendu : "<< chrono.elapsed() << " s." << std::endl;
 	
-	// rendu fil de fer
-	//rendu.calculerProjectionPrimitives(scene, image);
-	rendu.calculerProjectionPartition(scene, image);
+
+	// rendu en fil de fer
+	int choice = 0;
+	std::cout << std::endl << "Dessin en fil de fer : " << std::endl;
+	std::cout << "  1    - Dessiner les primitives" << std::endl;
+	std::cout << "  2    - Dessiner la grille" << std::endl;
+	std::cout << "  3    - Dessiner les primitives et la grille" << std::endl;
+	std::cout << " Autre - Ne rien dessiner" << std::endl;
+	std::cin>>choice;
+	
+	if( choice == 1 || choice == 3 )
+	{
+		rendu.calculerProjectionPrimitives(scene, image);
+	}
+	if( choice == 2 || choice == 3 )
+	{
+		rendu.calculerProjectionPartition(scene, image);
+	}
 	
 	
     // enregistre l'image
     image.enregistrer(nomImage);
 
-	_getch();
 
     return 0;
 }

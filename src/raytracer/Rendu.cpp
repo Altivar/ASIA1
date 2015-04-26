@@ -173,18 +173,35 @@ void RenduWhitted::calculerProjectionPrimitives(Scene &scene, Image &image) cons
 	for (it = itDebut; it != itFin; ++it)
 	{
 		
-		PrimitiveTriangle *pTri = (PrimitiveTriangle *)*it;
-		Vecteur2 a, b, c;
-		// Calcul de la projection du triangle sur l'image
-		pTri->calculerProjectionSurImage(a, b, c, *camera);
-		// Trace de chaque arete avec Bresenham
-		std::list<Vecteur2> pixelsTraces;
-		image.tracerDroiteBresenham(a, b, pixelsTraces);
-		image.tracerDroiteBresenham(b, c, pixelsTraces);
-		image.tracerDroiteBresenham(c, a, pixelsTraces);
-		std::list<Vecteur2>::iterator itPixels;
-		for (itPixels = pixelsTraces.begin(); itPixels != pixelsTraces.end(); ++itPixels)
-			image.setPixel(itPixels->_u, itPixels->_v, Couleur(0,0,0,1));
+		if( (*it)->GetPrimitiveType() == "Triangle" )
+		{
+			PrimitiveTriangle *pTri = (PrimitiveTriangle *)*it;
+			Vecteur2 a, b, c;
+			// Calcul de la projection du triangle sur l'image
+			pTri->calculerProjectionSurImage(a, b, c, *camera);
+			// Trace de chaque arete avec Bresenham
+			std::list<Vecteur2> pixelsTraces;
+			image.tracerDroiteBresenham(a, b, pixelsTraces);
+			image.tracerDroiteBresenham(b, c, pixelsTraces);
+			image.tracerDroiteBresenham(c, a, pixelsTraces);
+			std::list<Vecteur2>::iterator itPixels;
+			for (itPixels = pixelsTraces.begin(); itPixels != pixelsTraces.end(); ++itPixels)
+				image.setPixel(itPixels->_u, itPixels->_v, Couleur(0,0,0,1));
+		}
+		else if( (*it)->GetPrimitiveType() == "Sphere" )
+		{
+			PrimitiveSphere *pSphe = (PrimitiveSphere *)*it;
+			Vecteur2 c;
+
+			pSphe->calculerProjectionSurImage(c, *camera);
+
+			std::list<Vecteur2> pixelsTraces;
+			image.tracerCercleBresenham(c, 50, pixelsTraces);
+
+			std::list<Vecteur2>::iterator itPixels;
+			for (itPixels = pixelsTraces.begin(); itPixels != pixelsTraces.end(); ++itPixels)
+				image.setPixel(itPixels->_u, itPixels->_v, Couleur(0,0,0,1));
+		}
 
 	}
 

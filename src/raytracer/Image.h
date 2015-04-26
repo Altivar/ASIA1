@@ -58,7 +58,12 @@ struct Image
 
 	/// \brief Dessine un trait.
 	///
-	void Image::tracerDroiteBresenham(Vecteur2 a, Vecteur2 b, std::list<Vecteur2> &pixels);
+	void tracerDroiteBresenham(Vecteur2 a, Vecteur2 b, std::list<Vecteur2> &pixels);
+
+	/// \brief Dessine un cercle.
+	///
+	void tracerCercleBresenham(Vecteur2 center, int r, std::list<Vecteur2> &pixels);
+	void Draw8Points(int xc, int yc, int a, int b, std::list<Vecteur2> &pixels);
 
 	// private:
 	int _largeur, _hauteur;

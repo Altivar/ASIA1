@@ -44,6 +44,10 @@ struct Primitive
 	virtual Vecteur3 GetMaxPos() = 0;
 	// retourne la valeur min de l'AABB englobante
 	virtual Vecteur3 GetMinPos() = 0;
+
+	// retourne une chaine de caractere donnant le type de la primitive
+	virtual String GetPrimitiveType();
+
 };
 
 struct Sommet
@@ -125,6 +129,8 @@ struct PrimitiveTriangle : Primitive
 
 	void calculerProjectionSurImage(Vecteur2 &a, Vecteur2 &b, Vecteur2 &c, const CameraPinhole &camera);
 
+	virtual String GetPrimitiveType();
+
 };
 
 /// \brief Definit une primitive geometrique de type sphere.
@@ -161,6 +167,11 @@ struct PrimitiveSphere : Primitive
 	virtual Vecteur3 GetMaxPos();
 	// retourne la valeur min de l'AABB englobante
 	virtual Vecteur3 GetMinPos();
+
+	virtual String GetPrimitiveType();
+
+	void calculerProjectionSurImage(Vecteur2 &c, const CameraPinhole &camera);
+
 };
 
 /// \brief Definit une primitive geometrique de type boite
@@ -195,6 +206,8 @@ struct PrimitiveBoite : Primitive
 	void calculerProjectionSurImage(Vecteur2 &a, Vecteur2 &b, Vecteur2 &c, Vecteur2 &d,
 									Vecteur2 &e, Vecteur2 &f, Vecteur2 &g, Vecteur2 &h,
 									const CameraPinhole &camera);
+
+	virtual String GetPrimitiveType();
 
 };
 

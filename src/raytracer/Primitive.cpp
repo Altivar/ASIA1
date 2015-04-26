@@ -11,6 +11,11 @@ PrimitiveSphere::PrimitiveSphere(Materiau *materiau, const Vecteur3 &centre, ree
 Primitive(materiau), _centre(centre), _rayon(rayon)
 {}
 
+String Primitive::GetPrimitiveType()
+{
+	return "Primitive";
+}
+
 bool PrimitiveSphere::calculerIntersection(const Rayon &rayon, reel &distance) const
 {
 	Vecteur3 COr = rayon._origine - _centre;
@@ -100,6 +105,19 @@ Vecteur3 PrimitiveSphere::GetMinPos()
 {
 	return Vecteur3( _centre._x-_rayon, _centre._y-_rayon, _centre._z-_rayon );
 }
+
+String PrimitiveSphere::GetPrimitiveType()
+{
+	return "Sphere";
+}
+
+void PrimitiveSphere::calculerProjectionSurImage(Vecteur2 &c, const CameraPinhole &camera)
+{
+	c = camera.mondeVersImage((const Vecteur3 &)_centre);
+}
+
+
+
 
 Sommet::Sommet(const Vecteur3 &position, const Vecteur3 &normale, const Vecteur2 &texcoords):
 _position(position), _normale(normale)
@@ -282,6 +300,11 @@ bool PrimitiveTriangle::CheckLineTriangle( Vecteur3& L1, Vecteur3& L2 )
 	 return true;
 
 	return false;
+}
+
+String PrimitiveTriangle::GetPrimitiveType()
+{
+	return "Triangle";
 }
 
 /// [ALGO INTERSECTION BOITE/TRIANGLE]
@@ -537,6 +560,11 @@ void PrimitiveBoite::calculerProjectionSurImage(Vecteur2 &a, Vecteur2 &b, Vecteu
 	g = camera.mondeVersImage((const Vecteur3 &)G);
 	h = camera.mondeVersImage((const Vecteur3 &)H);
 
+}
+
+String PrimitiveBoite::GetPrimitiveType()
+{
+	return "Boite";
 }
 
 /// [PrimitiveBoite]
