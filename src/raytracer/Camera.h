@@ -54,8 +54,8 @@ struct CameraPinhole : Camera
 
 	// private:
 	Vecteur3 _position;
-	reel _fov;
 
+	reel _fov;
 	reel _invNbX, _invNbY;
 	reel _dU, _dV;
 

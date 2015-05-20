@@ -195,8 +195,11 @@ void RenduWhitted::calculerProjectionPrimitives(Scene &scene, Image &image) cons
 
 			pSphe->calculerProjectionSurImage(c, *camera);
 
+			// recupere le rayon du cercle à dessiner
+			double distFromCamera = pow(  pow(pSphe->_centre._x - camera->_position._x, 2) + pow(pSphe->_centre._y - camera->_position._y, 2) + pow(pSphe->_centre._z - camera->_position._z, 2), 0.5);
+
 			std::list<Vecteur2> pixelsTraces;
-			image.tracerCercleBresenham(c, 50, pixelsTraces);
+			image.tracerCercleBresenham(c, pSphe->_rayon/distFromCamera * 715, pixelsTraces);
 
 			std::list<Vecteur2>::iterator itPixels;
 			for (itPixels = pixelsTraces.begin(); itPixels != pixelsTraces.end(); ++itPixels)
