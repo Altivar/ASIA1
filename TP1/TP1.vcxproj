@@ -74,6 +74,7 @@
     <ClInclude Include="..\src\raytracer\Chronometre.h" />
     <ClInclude Include="..\src\raytracer\Couleur.h" />
     <ClInclude Include="..\src\raytracer\Eclairement.h" />
+    <ClInclude Include="..\src\raytracer\Forms.h" />
     <ClInclude Include="..\src\raytracer\Image.h" />
     <ClInclude Include="..\src\raytracer\Intersection.h" />
     <ClInclude Include="..\src\raytracer\Loader.h" />

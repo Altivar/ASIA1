@@ -1,6 +1,8 @@
 #include "Primitive.h"
 #include "Matrice33.h"
 
+#include "Forms.h"
+
 #include <cmath>
 
 
@@ -307,6 +309,69 @@ String PrimitiveTriangle::GetPrimitiveType()
 	return "Triangle";
 }
 
+Vecteur3* GetLinePlaneIntersection(Line line, Plane plane)
+{
+	
+	Vecteur3 dir = line._B - line._A;
+
+	Complex factorComplex;
+
+	Complex x(line._A._x, dir._x);
+	Complex y(line._A._y, dir._y);
+	Complex z(line._A._z, dir._z);
+
+	factorComplex += x * plane._a;
+	factorComplex += y * plane._b;
+	factorComplex += z * plane._c;
+	factorComplex += plane._d;
+
+	if( factorComplex._c == 0.0f )
+		return NULL;
+
+	float factor = - ( factorComplex._n / factorComplex._c );
+
+	if( factor < 0.0f || factor > 1.0f )
+		return NULL;
+
+	Vecteur3* res = new Vecteur3( x._n + x._c * factor, y._n + y._c * factor, z._n + z._c * factor );
+
+	return res;
+}
+bool IsLineTriangleCollision(Line line, Triangle tri)
+{
+	
+	Plane p(tri);
+
+	Vecteur3* pt = GetLinePlaneIntersection(line, p);
+
+	if( pt == NULL )
+		return false;
+
+	Vecteur3 AB = tri._B - tri._A;
+	Vecteur3 AC = tri._C - tri._A;
+	Vecteur3 APt = (*pt) - tri._A;
+
+	if( ProduitScalaire(AB,AC) * ProduitScalaire(AB,APt) < 0 )
+		return false;
+	
+	Vecteur3 BA = tri._A - tri._B;
+	Vecteur3 BC = tri._C - tri._B;
+	Vecteur3 BPt = (*pt) - tri._B;
+
+	if( ProduitScalaire(BA,BC) * ProduitScalaire(BA,BPt) < 0 )
+		return false;
+
+	Vecteur3 CA = tri._A - tri._C;
+	Vecteur3 CB = tri._B - tri._C;
+	Vecteur3 CPt = (*pt) - tri._C;
+
+	if( ProduitScalaire(CA,CB) * ProduitScalaire(CA,CPt) < 0 )
+		return false;
+
+	return true;
+
+}
+
 /// [ALGO INTERSECTION BOITE/TRIANGLE]
 
 
@@ -321,9 +386,23 @@ bool PrimitiveTriangle::intersectionCube(const Vecteur3& vecMin, const Vecteur3&
 	if( CheckLineBox(vecMin, vecMax, _B._position, _C._position) )
 		return true;
 
+	Triangle tri(_A._position, _B._position, _C._position);
+	Line line1(vecMin, vecMax);
+	Line line2(Vecteur3(vecMin._x, vecMax._y, vecMin._z), Vecteur3(vecMax._x, vecMin._y, vecMax._z));
+	Line line3(Vecteur3(vecMin._x, vecMin._y, vecMax._z), Vecteur3(vecMax._x, vecMax._y, vecMin._z));
+	Line line4(Vecteur3(vecMin._x, vecMax._y, vecMax._z), Vecteur3(vecMax._x, vecMin._y, vecMin._z));
+	
+	if( IsLineTriangleCollision(line1, tri) )
+		return true;
+	if( IsLineTriangleCollision(line2, tri) )
+		return true;
+	if( IsLineTriangleCollision(line3, tri) )
+		return true;
+	if( IsLineTriangleCollision(line4, tri) )
+		return true;
 
 	// si aucune arete du triangle ne passe dans la boite, test si le diagonales de la boite passe dans le triangle
-	Vecteur3 A, B;
+	/*Vecteur3 A, B;
 	A = vecMin;
 	B = vecMax;
 	if( CheckLineTriangle(A,B) )
@@ -339,7 +418,7 @@ bool PrimitiveTriangle::intersectionCube(const Vecteur3& vecMin, const Vecteur3&
 	A = Vecteur3(vecMin._x, vecMax._y, vecMax._z);
 	B = Vecteur3(vecMax._x, vecMin._y, vecMin._z);
 	if( CheckLineTriangle(A,B) )
-		return true;
+		return true;*/
 
 	// si toujours aucune collision, return false
 	return false;

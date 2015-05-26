@@ -75,6 +75,9 @@
     <ClInclude Include="..\src\raytracer\Case.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\raytracer\Forms.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\raytracer\Camera.cpp">
