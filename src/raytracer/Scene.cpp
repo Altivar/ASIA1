@@ -134,6 +134,8 @@ void Scene::valider(TypePartitionnement typePartionnement)
 		std::cerr << "Scene::valider : type de partitionnement invalide.\n";
 	}
 
+	_typePartitionnement = typePartionnement;
+
 	assert(_partitionnement);
 
 	_partitionnement->initialiser(primitivesBegin(), primitivesEnd());

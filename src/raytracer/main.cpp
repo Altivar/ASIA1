@@ -87,9 +87,12 @@ int main(int argc, char *argv[])
 	{
 		rendu.calculerProjectionPrimitives(scene, image);
 	}
-	if( choice == 2 || choice == 3 )
+	if( scene._typePartitionnement == Scene::TypePartitionnement::PARTITIONNEMENT_GRILLE)
 	{
-		rendu.calculerProjectionPartition(scene, image);
+		if( choice == 2 || choice == 3 )
+		{
+			rendu.calculerProjectionPartition(scene, image);
+		}
 	}
 	
 	

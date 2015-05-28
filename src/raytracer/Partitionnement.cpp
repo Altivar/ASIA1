@@ -146,7 +146,7 @@ void PartitionnementGrille::initialiser( AutoSet<Primitive>::const_iterator itDe
 		_3DOffset._x = xmin;
 		_3DOffset._y = ymin;
 		_3DOffset._z = zmin;
-		int nbCaseSurUnAxe = (int)(pow( (nbPrimitive/40), 0.333) );
+		int nbCaseSurUnAxe = (int)(pow( (nbPrimitive/45), 0.333) );
 		_3DDimension._x = (nbCaseSurUnAxe > (xmax-xmin+0.5)) ? nbCaseSurUnAxe : (int)(xmax-xmin+0.5);
 		_3DDimension._y = (nbCaseSurUnAxe > (ymax-ymin+0.5)) ? nbCaseSurUnAxe : (int)(ymax-ymin+0.5);
 		_3DDimension._z = (nbCaseSurUnAxe > (zmax-zmin+0.5)) ? nbCaseSurUnAxe : (int)(zmax-zmin+0.5);

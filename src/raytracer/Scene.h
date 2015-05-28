@@ -144,6 +144,9 @@ public:
 	// retourne le partitionnement pour avoir accès aux cases du partitionnement grille (pour le rendu de l'armature)
 	Partitionnement* GetPatitionnement() { return _partitionnement; }
 
+	// retourne le type de partitionnement choisi
+	TypePartitionnement _typePartitionnement;
+
 };
 
 #endif

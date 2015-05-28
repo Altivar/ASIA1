@@ -120,7 +120,7 @@ bool Case::calculerIntersection(const Rayon &rayon, reel &distance, reel distanc
 	
 void Case::Subdiviser()
 {
-	if( _primitiveData.size() < 40 )
+	if( _primitiveData.size() < 35 )
 		return;
 
 
